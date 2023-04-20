@@ -1,0 +1,61 @@
+@font-face {
+  font-family: "Outfit";
+  src: url("C:/Users/mbrad/Google Drive/projects/web_design/Taarus/fonts/Outfit/Outfit-VariableFont_wght.ttf");
+}
+
+/*
+body {
+	background: linear-gradient(90deg, black, grey);
+}
+*/
+
+header {
+	text-align: center;
+	background-image: url("images/background.png");
+	/*background-size: 1500px;*/
+  background-size: cover;
+	background-repeat: no-repeat;
+	height: 1500px;
+}
+
+nav ul {
+	list-style-type: none;
+	margin: 0;
+	overflow: hidden;
+	text-align: left;
+	width: 40%;
+}
+
+li {
+	display: block;
+	text-align: left;
+	padding: 0px 0px;
+	margin-top: -50px;
+}
+
+ul a {
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+}
+
+a {
+	color: white;
+	text-align: right;
+	padding: 0;
+}
+
+li a:hover {
+	color: #A0A0A0;
+}
+
+li h4 {
+	font-family: 'Outfit';
+	font-weight: normal;
+	font-size: 60px;
+	/*text-transform: uppercase;*/
+}
+
+h6 {
+  color: white;
+}
