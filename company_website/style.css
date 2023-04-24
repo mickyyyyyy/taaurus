@@ -1,61 +1,84 @@
+/* Reset back to defaults */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Importing fonts */
 @font-face {
   font-family: "Outfit";
-  src: url("C:/Users/mbrad/Google Drive/projects/web_design/Taarus/fonts/Outfit/Outfit-VariableFont_wght.ttf");
+  src: url("fonts/Outfit/Outfit-VariableFont_wght.ttf");
 }
 
-/*
-body {
-	background: linear-gradient(90deg, black, grey);
-}
-*/
-
+/* Header styling */
 header {
-	text-align: center;
 	background-image: url("images/background.png");
-	/*background-size: 1500px;*/
-  background-size: cover;
-	background-repeat: no-repeat;
-	height: 1500px;
+  position: relative;
+  left: 10%;
+  display: flex;
+  width: 90%;
 }
 
+.main-page {
+  width: 50%;
+}
+
+/* Navigation styling */
 nav ul {
-	list-style-type: none;
-	margin: 0;
-	overflow: hidden;
-	text-align: left;
-	width: 40%;
+  width: 100%;
+  display: inline-block;
 }
 
-li {
-	display: block;
-	text-align: left;
-	padding: 0px 0px;
-	margin-top: -50px;
+nav li {
+  display: block;
+  padding: 50px 0px;
 }
 
-ul a {
-	text-align: center;
+nav a {
 	text-decoration: none;
-	display: inline-block;
 }
 
-a {
-	color: white;
-	text-align: right;
-	padding: 0;
-}
-
-li a:hover {
+nav h4:hover {
 	color: #A0A0A0;
 }
 
-li h4 {
-	font-family: 'Outfit';
-	font-weight: normal;
-	font-size: 60px;
+nav h4 {
+	font-family: Outfit;
+	font-weight: 300;
+	font-size: 75px;
+  color: white;
 	/*text-transform: uppercase;*/
 }
 
-h6 {
+/* Logo styling */
+#logo {
+  margin: auto 0;
+  text-align: center;
+}
+
+/* Main section styling */
+main {
+  background-image: url("images/background.png");
+  position: relative;
+  left: 10%;
+  width: 90%;
+}
+
+h2 {
+  font-family: Outfit;
+  font-weight: 300;
+  font-size: 75px;
   color: white;
+}
+
+/* Footer styling */
+footer {
+  background-color: black;
+}
+
+footer h6 {
+  color: white;
+  font-weight: normal;
+  font-size: 15px;
 }
