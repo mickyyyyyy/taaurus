@@ -11,6 +11,9 @@
   src: url("fonts/Outfit/Outfit-VariableFont_wght.ttf");
 }
 
+/* Smooth scrolling */
+html{scroll-behavior:smooth}
+
 /* Header styling */
 header {
 	background-image: url("images/background.png");
