@@ -63,9 +63,9 @@ nav h4 {
   color: white;
   font-size: 25px;
   border: 1px solid white;
-  margin: auto 100px;
-  height: 500px;
-  width: 300px;
+  margin: auto 4em; /*100px;*/
+  height: 20em;/*500px;*/
+  width: 12em; /*300px;*/
 }
 
 table {
@@ -98,12 +98,9 @@ h2 {
 #services table {
   margin-left: auto;
   margin-right: auto;
-  margin-top: auto;
-  margin-bottom: auto;
   font-family: Outfit;
   font-size: 25px;
   color: white;
-  border-color: white;
   border-spacing: 50px 50px;
 }
 
@@ -117,6 +114,56 @@ h2 {
 
 #services td:hover {
   background-color: black;
+}
+
+/* Team styling */
+#team h2 {
+  padding-bottom: 50px;
+}
+
+#team table {
+  margin-left: auto;
+  margin-right: auto;
+  border-color: white;
+  border-spacing: 50px 0px;
+}
+
+td {
+  width: 250px;
+}
+
+.profile td {
+  border: 1px solid white;
+  border-radius: 25%;
+  height: 250px;
+}
+
+.name td {
+  height: 25px;
+  padding-top: 25px;
+  font-family: Outfit;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.position td {
+  height: 25px;
+  padding-bottom: 25px;
+  font-family: Outfit;
+  font-size: 15px;
+  color: white;
+  text-align: center;
+  font-style: italic;
+}
+
+.description td {
+  margin-top: 0;
+  vertical-align: text-top;
+  color: white;
+  font-family: Outfit;
+  font-size: 15px;
 }
 
 /* Footer styling */
