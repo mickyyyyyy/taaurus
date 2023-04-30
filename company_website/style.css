@@ -166,6 +166,60 @@ td {
   font-size: 15px;
 }
 
+/* Careers styling */
+#careers p {
+  padding: 50px 50px;
+  color: white;
+  font-family: Outfit;
+}
+
+/* Contact styling */
+#contact p {
+  padding-top: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
+  color: white;
+  font-family: Outfit;
+}
+
+#contact form {
+  padding: 50px 50px;
+}
+
+#contact #message {
+  display: flex;
+}
+
+#contact label {
+  color: white;
+  font-family: Outfit;
+  display: inline-block;
+  width: 100px;
+  text-align: right;
+  top: 0;
+}
+
+#contact textarea {
+  width: 500px;
+  height: 200px;
+  color: black;
+  font-size: 15px;
+  font-family: Outfit;
+  margin-left: 5px;
+  margin-top: 2px;
+}
+
+#contact #submit {
+  margin-left: 105px;
+  margin-top: 10px;
+}
+
+#contact #submit-button {
+  font-family: Outfit;
+  color: white;
+  background-color: black;
+}
+
 /* Footer styling */
 footer {
   background-color: black;
