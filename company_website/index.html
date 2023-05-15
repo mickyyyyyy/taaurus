@@ -7,113 +7,138 @@
 </head>
 <body>
   <header>
-    <!-- Navigation bar at the top of the main page -->
-    <nav class="main-page">
-      <ul>
-        <li class='menu-item'><a href='#services'><h4>&lt;services></h4></a></li>
-        <li class='menu-item'><a href='#team'><h4>&lt;team></h4></a></li>
-        <li class='menu-item'><a href='#careers'><h4>&lt;careers></h4></a></li>
-        <li class='menu-item'><a href='#contact'><h4>&lt;contact us></h4></a></li>
-      </ul>
-    </nav>
-    <div class="main-page" id="logo">
-      <table>
-        <tr>
-          <td>Taurus Worldly</td>
-        </tr>
-        <tr>
-          <td>Logo Placeholder</td>
-        </tr>
-      </table>
-    </div>
+    <ul>
+      <!-- Logo at the top left -->
+      <li class='top' id='icon'>
+        <img src="./images/favicon.ico"/>
+      </li>
+
+      <!-- Navigation bar at the top of the main page -->
+      <li class='top' id='navigation'>
+        <nav class="main-page">
+          <ul>
+            <li class='menu-item'><a href='#services'><h4>services</h4></a
+              ></li>
+            <li class='menu-item'><a href='#team'><h4>team</h4></a></li>
+            <li class='menu-item'><a href='#careers'><h4>careers</h4></a></li>
+            <li class='menu-item'><a href='#contact'><h4>contact us</h4></a
+              ></li>
+          </ul>
+        </nav>
+      </li>
+    </ul>
   </header>
   <main>
-    <hr>
-    <section id="services">
-      <h2>&lt/services></h2>
-      <table>
-        <tr>
-          <td><a>Cryptocurrency</a></td>
-          <td><a>Real Estate</a></td>
-          <td><a>Retail</a></td>
-        </tr>
-        <tr>
-          <td><a>Resume</a></td>
-          <td><a>Consultancy</a></td>
-          <td><a>Tutorial</a></td>
-        </tr>
-      </table>
-    </section>
-    <hr>
-    <section id="team">
-      <h2>&lt/team></h2>
-      <table>
-        <tr class="profile">
-          <td><a></a></td>
-          <td><a></a></td>
-        </tr>
-        <tr class="name">
-          <td><a>Michael Hammond</a></td>
-          <td><a>Roger Lambert</a></td>
-        </tr>
-        <tr class="position">
-          <td><a>Chief Executive Officer</a></td>
-          <td><a>Chief Creative Officer</a></td>
-        </tr>
-        <tr class="description">
-          <td><a>As founder of Taaurus, Michael has always been problem solving-
-          oriented. He technically has degrees in Engineering and Science, and
-          brings programming skills to the team. Michael has worked in
-          Engineering based roles previously, but found programming to be his
-          calling.</a></td>
-          <td><a>The co-founder of Taaurus, Roger has always been
-          creative-oriented, finding interest in art and design from a young
-          age, he knew he could find purpose in creating for other people. Roger
-          has a degree in game design, and brings graphic design and animation
-          experience to the team.</a></td>
-        </tr>
-      </table>
-    </section>
-    <hr>
-    <section id="careers">
-      <h2>&lt/careers></h2>
-      <p>We currently don't have the capacity to hire any more staff. When we
-      do, we'll update this page with current roles which are available at
-      Taaurus!</p>
-    </section>
-    <hr>
-    <section id="contact">
-      <h2>&lt/contact></h2>
-      <p>Feel free to reach out to us and we'll try respond as quickly as we
-      can!</p>
+    <h1>Taaurus</h1>
+    <div class='odd-text' id='quote'>
+      <h3>
+        <p>To see the world, things dangerous to come to,</p>
+        <p>to see behind walls, draw closer,</p>
+        <p>to find each other, and to feel.</p>
+        <p>That is the purpose of life.</p>
+      </h3>
+    </div>
+    <div class='main-sections' id='services'>
+      <h2>Services</h2>
+      <ul>
+        <li class='arrow' id='left'>
+          <span>&lt</span>
+        </li>
+        <li class='media'>
+          <video autoplay loop muted>
+            <source src='./videos/services_consultancy.mp4' type="video/mp4"/>
+          </video>
+          <div id='caption'>
+            <p><h1>Consultancy</h1></p>
+            <p><h2>Websites</h2></p>
+          </div>
+        </li>
+        <li class='arrow' id='right'>
+          <span>></span>
+        </li>
+      </ul>
+    </div>
+    <div class='odd-text' id='services-team'>
+      <h3>
+        <p>Now you know a bit about what we do here...</p>
+        <p>You should meet the team behind it!</p>
+      </h3>
+    </div>
+    <div class='main-sections' id='team'>
+      <h2>Team</h2>
+      <ul>
+        <li class='text' id='michael-text'>
+          <h3><p>Michael Hammond</p></h3>
+          <h4><p>Chief Executive Officer</p></h4>
+          <h5><p>As founder of Taaurus, Michael has always been problem
+          solving-oriented. He technically has degrees in Engineering and
+          Science, and brings programming skills to the team. Michael has worked
+          in Engineering based roles previously, but found programming to be his
+          calling.</p></h5>
+        </li>
+        <li class='profile' id='michael-profile'>
+          <img src="./images/michael.png"/>
+        </li>
+        <li class='profile' id='roger-profile'>
+          <img src="./images/roger.png"/>
+        </li>
+        <li class='text' id='roger-text'>
+          <h3><p>Roger Lambert</p></h3>
+          <h4><p>Chief Creative Officer</p></h4>
+          <h5><p>The co-founder of Taaurus, Roger has always been creative-
+          oriented, finding interest in art and design from a young age, he
+          knew he could find purpose in creating for other people. Roger has a
+          degree in game design, and brings graphic design and animation
+          experience to the team.</p></h5>
+        </li>
+      </ul>
+    </div>
+    <div class='main-sections' id='careers'>
+      <h2>Careers</h2>
+      <div class='body-text'>
+        <p>We are an emerging company, wanting to expand in the future, dealing
+        with innovative steps in the space of Technology.</p>
+        <p>We want to make a difference and want to hopefully expand and
+        thrive.</p>
+        <br>
+        <p>Watch closely for positions coming soon!</p>
+        <br>
+        <p>From the Taaurus Team</p>
+      </div>
+    </div>
+    <div class='main-sections' id='contact'>
+      <h2>Contact Us</h2>
       <form>
-        <label from="first-name">First name:</label>
-        <input id="first-name"/>
+        <label for='name'>Name</label>
         <br>
-        <label from="last-name">Last name:</label>
-        <input id="last-name"/>
+        <input class='text-input' type='text' id='name'
+        placeholder='Your Name'/>
         <br>
-        <label from="email">Email:</label>
-        <input id="email"/>
         <br>
-        <label from="phone">Phone:</label>
-        <input id="phone"/>
+        <label for='email'>Email</label>
         <br>
-        <section id="message">
-          <label from="message">Message:</label>
-          <textarea id="message" placeholder="What do you want to tell us?"
-          ></textarea>
-        </section>
-        <section id="submit"/>
-          <input id="submit-button" type="submit"/>
-        </section>
+        <input class='text-input' type='text' id='email'
+        placeholder='Your Email'/>
+        <br>
+        <br>
+        <label for='phone'>Phone</label>
+        <br>
+        <input class='text-input' type='text' id='phone'
+        placeholder='Your Phone'/>
+        <br>
+        <br>
+        <label for='message'>Message</label>
+        <br>
+        <textarea id='message' placeholder='Your Message'
+        ></textarea>
+        <br>
+        <br>
+        <input class='submit-button' type='submit'/>
       </form>
-    </section>
-    <hr>
+    </div>
   </main>
 </body>
 <footer>
   <h6>&copy; Copyright. All Rights Reserved.</h6>
 </footer>
-
 </html>
