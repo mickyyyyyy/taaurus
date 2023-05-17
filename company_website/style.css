@@ -291,7 +291,7 @@ span {
 
 #careers h2 {
   position: relative;
-  top: -5.5em;
+  top: -7em;
 }
 
 #careers:before {
@@ -299,8 +299,9 @@ span {
   z-index: -1;
   position: relative;
   left: -0.17em;
+  top: -0.15em;
   font-family: Outfit;
-  font-size: 350px;
+  font-size: 450px;
   font-weight: 550;
   color: #903434;
   opacity: 50%;
@@ -310,10 +311,10 @@ span {
   content: "coming";
   z-index: -1;
   position: relative;
-  top: 0.7em;
-  right: -1em;
+  top: 0.3em;
+  right: -0.2em;
   font-family: Outfit;
-  font-size: 350px;
+  font-size: 450px;
   font-weight: 550;
   color: #903434;
   opacity: 50%;
@@ -325,7 +326,7 @@ span {
   font-size: 20px;
   text-align: left;
   position: relative;
-  top: -9em;
+  top: -22em;
   line-height: 2.5em;
 }
 
