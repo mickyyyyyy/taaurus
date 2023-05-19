@@ -12,15 +12,18 @@
 }
 
 /* Smooth scrolling */
-html{scroll-behavior:smooth}
+html{
+  scroll-behavior:smooth;
+  scrollbar-width: none; /* for Firefox */
+}
 
 /* Body styling */
 body {
   background-color: #F5F5F5;
   /* hide scrollbar but allow scrolling */
   -ms-overflow-style: none; /* for Internet Explorer, Edge */
-  scrollbar-width: none; /* for Firefox */
   overflow-y: scroll;
+  overflow: -moz-scrollbars-none;
 }
 
 body::-webkit-scrollbar {
@@ -355,7 +358,8 @@ input::placeholder,
 textarea::placeholder,
 textarea,
 input[type=submit],
-input[type=text] {
+input[type=text],
+input[type=email] {
   font-family: Outfit;
   font-size: 16px;
 }
@@ -365,7 +369,9 @@ input[type=submit] {
   border: #A6313A;
   color: white;
   padding: 0.5em;
-  border-radius: 10%
+  border-radius: 10%;
+  margin-top: 3em;
+  margin-left: 7em;
 }
 
 input[type=submit]:hover {
@@ -384,11 +390,24 @@ textarea {
   padding-bottom: 10em;
 }
 
+#contact p {
+  margin-top: 12em;
+  margin-left: -5em;
+  font-family: Outfit;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: left;
+  position: relative;
+  line-height: 2.5em;
+}
+
+
 /* Footer styling */
 footer {
   background-color: black;
   position: absolute;
-  padding-right: 106.3em;
+  clear: right;
+  width: 100%;
   top: 6850px;
 }
 
