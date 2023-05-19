@@ -108,32 +108,36 @@
     </div>
     <div class='main-sections' id='contact'>
       <h2>Contact Us</h2>
-      <form>
+      <form method='POST' action='https://formsubmit.co/michaelhammond491@gmail.com'>
         <label for='name'>Name</label>
         <br>
-        <input class='text-input' type='text' id='name'
+        <input class='text-input' type='text' name='name' required
         placeholder='Your Name'/>
         <br>
         <br>
         <label for='email'>Email</label>
         <br>
-        <input class='text-input' type='text' id='email'
+        <input class='text-input' type='email' name='email' required
         placeholder='Your Email'/>
         <br>
         <br>
         <label for='phone'>Phone</label>
         <br>
-        <input class='text-input' type='text' id='phone'
+        <input class='text-input' type='text' name='phone' required
         placeholder='Your Phone'/>
         <br>
         <br>
         <label for='message'>Message</label>
         <br>
-        <textarea id='message' placeholder='Your Message'
+        <textarea name='message' placeholder='Your Message' required
         ></textarea>
         <br>
         <br>
-        <input class='submit-button' type='submit'/>
+        <input class='submit-button' type='submit' name='submit'
+        value='Submit'/>
+        <input type='hidden' name='_captcha' value='false'/>
+        <input type="hidden" name='_next' value='http://taaurus-cleaner.com/submitted.html#contact'/>
+        <input type="hidden" name='_subject' value='New Taaurus Query!'/>
       </form>
     </div>
   </main>
