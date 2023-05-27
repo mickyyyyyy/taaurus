@@ -24,6 +24,8 @@ body {
   -ms-overflow-style: none; /* for Internet Explorer, Edge */
   overflow-y: scroll;
   overflow: -moz-scrollbars-none;
+  font-size: 100%;
+  width: 100%;
 }
 
 body::-webkit-scrollbar {
@@ -32,13 +34,13 @@ body::-webkit-scrollbar {
 
 /* Header styling */
 header {
-  width: 100%;
-  height: 56px;
+  /*width: 100%;*/
+  height: 0em;/*56px;*/
 }
 
 header ul {
   margin: 0;
-  height: 3.5em;
+  height:  0em;/*3.5em;*/
   padding: 0.5em 0.5em;
 }
 
