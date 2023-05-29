@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  width: 100%;
 }
 
 /* Importing fonts */
@@ -12,9 +13,13 @@
 }
 
 /* Smooth scrolling */
-html{
+html {
   scroll-behavior:smooth;
   scrollbar-width: none; /* for Firefox */
+  width: 1920px;
+  justify-content: center;
+  margin: 0 auto;
+  transform-origin: center;
 }
 
 /* Body styling */
@@ -25,7 +30,8 @@ body {
   overflow-y: scroll;
   overflow: -moz-scrollbars-none;
   font-size: 100%;
-  width: 100%;
+  width: 1920px;
+  text-align: center;
 }
 
 body::-webkit-scrollbar {
@@ -34,14 +40,19 @@ body::-webkit-scrollbar {
 
 /* Header styling */
 header {
-  /*width: 100%;*/
-  height: 0em;/*56px;*/
+  position: fixed;
+  background-color: white;
+  top: 0;
+  width: 1920px;
+  height: 3.5em;
+  z-index: 1;
 }
 
 header ul {
   margin: 0;
-  height:  0em;/*3.5em;*/
+  height:  0em;
   padding: 0.5em 0.5em;
+  width: 1920px;
 }
 
 header li {
@@ -49,6 +60,12 @@ header li {
 }
 
 /* Icon styling */
+#icon {
+  position: relative;
+  left: -58em;
+  width: 2em;
+}
+
 header img {
   width: 2em;
 }
@@ -61,8 +78,9 @@ header nav {
 header #navigation {
   position: absolute;
   top: 0;
-  width: 50em;
-  margin-left: 32em;
+  width: 0em;
+  margin-top: 0.2em;
+  margin-left: -60em;
   padding: 0.5em 0.5em;
   text-align: center;
 }
@@ -91,25 +109,22 @@ nav h4 {
 
 /* Main styling */
 main {
+  position: relative;
+  top: 3em;
   background-image: url("./images/Website_banner.png");
-  /* "./images/Website_banner_white_version.png" */
   background-repeat: no-repeat;
-}
-
-main::before {
-  background-color: rgba(0,0,0,0.7);
+  margin-top: -3.5em;
+  padding: 0;
 }
 
 main h1 {
   height: 1080px;
   margin: 0 0;
-  padding: 2.5em 0;
   text-transform: uppercase;
   font-family: Outfit;
   font-weight: bold;
   font-size: 128px;
   text-align: center;
-  background-color: rgba(255,255,255,0.1);
 }
 
 /* Quote styling */
@@ -118,6 +133,7 @@ main h1 {
   margin-bottom: 5em;
   width: 100%;
   padding: 8em;
+  text-align: left;
 }
 
 .odd-text h3 {
@@ -137,7 +153,7 @@ main h1 {
   padding-left: 2em;
   padding-right: 2em;
   padding-bottom: 10em;
-  padding-top: 1em;
+  padding-top: 3em;
 }
 
 h2 {
@@ -146,61 +162,67 @@ h2 {
   font-weight: bold;
   color: #792B2B;
   padding-bottom: 0.5em;
+  text-align: left;
 }
 
 /* Services styling */
 #services {
   height: 1080px;
+  width: 1920px;
 }
 
 #services li {
   display: inline-block;
 }
 
+.media {
+  width: 90em;
+  height: 45em;
+  background-color: black;
+  position: relative;
+  top: -13em;
+}
+
+#caption {
+  position: relative;
+  top: 20em;
+  text-align: center;
+}
+
+#caption:hover {
+  transform: scale(1.1);
+}
+
 #caption h1,
 #caption h2 {
-  text-transform: none;
   position: relative;
+  top: -0.5em;
+  text-transform: none;
   text-align: center;
   width: 100%;
   color: white;
 }
 
 #caption h1 {
-  height: 0px;
+  height: 2em;
   padding: 0;
-  margin: 0;
   font-size: 50px;
-  top: -7em;
 }
 
 #caption h2 {
-  top: -8.5em;
   font-size: 35px;
 }
 
 .arrow {
-  position: absolute;
+  position: relative;
+  top: 1em;
   margin-top: 15em;
+  width: 10em;
+  height: 20em;
 }
 
 span:hover {
 	color: #000000;
-}
-
-#left {
-  margin-left: 3em;
-}
-
-#right {
-  margin-right: 3em;
-}
-
-.media {
-  width: 70%;
-  margin: 0 12em;
-  padding-left: 7em;
-  padding-top: 3em;
 }
 
 video {
@@ -243,7 +265,7 @@ span {
 .text {
   font-family: Outfit;
   width: 20%;
-  top: -27em;
+  top: -30em;
 }
 
 .text h3 {
@@ -267,19 +289,20 @@ span {
 }
 
 #michael-text {
-  top: -28.5em;
-  margin-left: 4em;
-}
-
-#roger-text {
-  margin-left: 2em;
+  margin-left: -20em;
+  margin-right: 1em;
 }
 
 .profile {
   margin-top: 4em;
-  width: 25%;
+  width: 15%;
   text-align: center;
   top: -12em;
+}
+
+#michael-profile {
+  width: 15.47%;
+  margin-right: 5em;
 }
 
 /* Careers styling */
@@ -319,7 +342,7 @@ span {
   z-index: -1;
   position: relative;
   top: 0.3em;
-  right: -0.2em;
+  right: 0.15em;
   font-family: Outfit;
   font-size: 450px;
   font-weight: 550;
@@ -346,8 +369,9 @@ span {
 form {
   position: relative;
   top: -5em;
+  right: 8em;
   padding-top: 5em;
-  height: 1200px;
+  height: 1080px;
   margin: 0 10em;
   font-family: Outfit;
   font-size: 16px;
@@ -356,6 +380,13 @@ form {
   background-repeat: no-repeat;
   background-position-x: right;
   overflow-y: visible;
+  text-align: left;
+}
+
+form p {
+  position: relative;
+  top: -3em;
+  left: 5em;
 }
 
 input::placeholder,
@@ -375,6 +406,7 @@ input[type=submit] {
   padding: 0.5em;
   border-radius: 10%;
   margin-top: 1em;
+  width: fit-content;
 }
 
 input[type=submit]:hover {
@@ -390,7 +422,6 @@ textarea {
   padding: 0.5em;
   width: 30em;
   height: 10em;
-  /*padding-bottom: 10em;*/
 }
 
 #contact p {
@@ -407,11 +438,11 @@ textarea {
 
 /* Footer styling */
 footer {
-  background-color: black;
+  background-color: #A6313A;;
   position: absolute;
   clear: right;
-  width: 100%;
-  top: 470em;
+  width: 1920px;
+  top: 448em;
 }
 
 footer h6 {
@@ -419,4 +450,5 @@ footer h6 {
   font-weight: normal;
   font-family: Outfit;
   font-size: 15px;
+  text-align: left;
 }
