@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Taarus</title>
+  <title>Taaurus</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
 </head>
@@ -45,9 +46,7 @@
           <span>&lt</span>
         </li>
         <li class='media'>
-          <video autoplay loop muted>
-            <source src='./videos/services_consultancy.mp4' type="video/mp4"/>
-          </video>
+          <!-- Put the services video in here -->
           <div id='caption'>
             <p><h1>Consultancy</h1></p>
             <p><h2>Websites</h2></p>
@@ -108,7 +107,8 @@
     </div>
     <div class='main-sections' id='contact'>
       <h2>Contact Us</h2>
-      <form method='POST' action='https://formsubmit.co/michaelhammond491@gmail.com'>
+      <form method='POST'
+       action='https://formsubmit.co/michaelhammond491@gmail.com'>
         <label for='name'>Name</label>
         <br>
         <input class='text-input' type='text' name='name' required
@@ -119,10 +119,9 @@
         <br>
         <input class='text-input' type='email' name='email' required
         placeholder='Your Email'/>
-        <!--<input type='hidden' name='_cc' value='michaelhammond491@gmail.com'/>-->
         <input type="hidden" name="_autoresponse"
-        value="Thank you for your message, we'll get back to you as soon as we can! Sincerely, The Taaurus Team">
-        <!--\nKind Regards,\nThe Taaurus Team-->
+        value="Thank you for your message, we'll get back to you as soon as we
+        can! Sincerely, The Taaurus Team">
         <br>
         <br>
         <label for='phone'>Phone</label>
@@ -140,7 +139,8 @@
         <input class='submit-button' type='submit' name='submit'
         value='Submit'/>
         <!--<input type='hidden' name='_captcha' value='false'/>-->
-        <input type="hidden" name='_next' value='https://www.taaurus.com.au/submitted.html#contact'/>
+        <input type="hidden" name='_next'
+        value='https://www.taaurus.com.au/submitted.html#contact'/>
         <input type="hidden" name='_subject' value='New Taaurus Query!'/>
       </form>
     </div>
