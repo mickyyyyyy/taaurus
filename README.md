@@ -1,5 +1,5 @@
 # Taaurus
-All the project files for our websites.
+All the project files for our company website.
 
 ## Formatting
 
