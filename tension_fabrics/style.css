@@ -715,10 +715,6 @@ footer h6 {
   #partners td {
     width: 30vw;
   }
-
-  #our-partners img {
-    width: 100%;
-  }
 }
 
 @media screen and (max-width: 600px) {
