@@ -1,0 +1,454 @@
+/* Reset back to defaults */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/* Importing fonts */
+@font-face {
+  font-family: "Outfit";
+  src: url("fonts/Outfit/Outfit-VariableFont_wght.ttf");
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior:smooth;
+  scrollbar-width: none; /* for Firefox */
+  width: 1920px;
+  justify-content: center;
+  margin: 0 auto;
+  transform-origin: center;
+}
+
+/* Body styling */
+body {
+  background-color: #F5F5F5;
+  /* hide scrollbar but allow scrolling */
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  overflow-y: scroll;
+  overflow: -moz-scrollbars-none;
+  font-size: 100%;
+  width: 1920px;
+  text-align: center;
+}
+
+body::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
+}
+
+/* Header styling */
+header {
+  position: fixed;
+  background-color: white;
+  top: 0;
+  width: 1920px;
+  height: 3.5em;
+  z-index: 1;
+}
+
+header ul {
+  margin: 0;
+  height:  0em;
+  padding: 0.5em 0.5em;
+  width: 1920px;
+}
+
+header li {
+  display: inline-block;
+}
+
+/* Icon styling */
+#icon {
+  position: relative;
+  left: -58em;
+  width: 2em;
+}
+
+header img {
+  width: 2em;
+}
+
+/* Navigation styling */
+header nav {
+  text-align: center;
+}
+
+header #navigation {
+  position: absolute;
+  top: 0;
+  width: 0em;
+  margin-top: 0.2em;
+  margin-left: -60em;
+  padding: 0.5em 0.5em;
+  text-align: center;
+}
+
+nav li {
+  display: inline-block;
+  width: 8em;
+}
+
+nav a {
+	text-decoration: none;
+}
+
+nav h4:hover {
+	color: #A0A0A0;
+}
+
+nav h4 {
+	font-family: Outfit;
+	font-weight: bold;
+	font-size: 16px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #565555;
+}
+
+/* Main styling */
+main {
+  position: relative;
+  top: 3em;
+  background-image: url("./images/Website_banner.png");
+  background-repeat: no-repeat;
+  margin-top: -3.5em;
+  padding: 0;
+}
+
+main h1 {
+  height: 1080px;
+  margin: 0 0;
+  text-transform: uppercase;
+  font-family: Outfit;
+  font-weight: bold;
+  font-size: 128px;
+  text-align: center;
+}
+
+/* Quote styling */
+.odd-text {
+  margin-top: 5em;
+  margin-bottom: 5em;
+  width: 100%;
+  padding: 8em;
+  text-align: left;
+}
+
+.odd-text h3 {
+  width: 100%;
+  font-family: Outfit;
+  font-weight: bold;
+  font-size: 70px;
+  color: #944444;
+}
+
+.odd-text p {
+  padding: 0.2em 0;
+}
+
+.main-sections {
+  width: 100%;
+  padding-left: 2em;
+  padding-right: 2em;
+  padding-bottom: 10em;
+  padding-top: 3em;
+}
+
+h2 {
+  font-family: Outfit;
+  font-size: 80px;
+  font-weight: bold;
+  color: #792B2B;
+  padding-bottom: 0.5em;
+  text-align: left;
+}
+
+/* Services styling */
+#services {
+  height: 1080px;
+  width: 1920px;
+}
+
+#services li {
+  display: inline-block;
+}
+
+.media {
+  width: 90em;
+  height: 45em;
+  background-color: black;
+  position: relative;
+  top: -13em;
+}
+
+#caption {
+  position: relative;
+  top: 20em;
+  text-align: center;
+}
+
+#caption:hover {
+  transform: scale(1.1);
+}
+
+#caption h1,
+#caption h2 {
+  position: relative;
+  top: -0.5em;
+  text-transform: none;
+  text-align: center;
+  width: 100%;
+  color: white;
+}
+
+#caption h1 {
+  height: 2em;
+  padding: 0;
+  font-size: 50px;
+}
+
+#caption h2 {
+  font-size: 35px;
+}
+
+.arrow {
+  position: relative;
+  top: 1em;
+  margin-top: 15em;
+  width: 10em;
+  height: 20em;
+}
+
+span:hover {
+	color: #000000;
+}
+
+video {
+  width: 100%;
+  text-align: center;
+}
+
+span {
+  color: #8E8989;
+  font-size: 100px;
+  display: inline-block;
+  transform: scaleY(2);
+  transform-origin: 0 0;
+  margin-bottom: -50%;
+  vertical-align: central;
+}
+
+/* Introduction to team section styling */
+#services-team {
+  padding-top: 0;
+  text-align: right;
+}
+
+/* Team styling */
+#team {
+  padding-bottom: 0;
+}
+
+#team ul {
+  margin-top: 5em;
+  margin-left: 5em;
+  margin-right: 5em;
+}
+
+#team li {
+  display: inline-block;
+  position: relative;
+}
+
+.text {
+  font-family: Outfit;
+  width: 20%;
+  top: -30em;
+}
+
+.text h3 {
+  font-weight: 550;
+  font-size: 32px;
+}
+
+.text h4 {
+  margin-top: 0.5em;
+  font-weight: 550;
+  font-size: 20px;
+}
+
+.text h5 {
+  margin-top: 2em;
+  margin-right: 3em;
+  font-weight: 550px;
+  font-size: 20px;
+  color: #9D4141;
+  line-height: 1.5em;
+}
+
+#michael-text {
+  margin-left: -20em;
+  margin-right: 1em;
+}
+
+.profile {
+  margin-top: 4em;
+  width: 15%;
+  text-align: center;
+  top: -12em;
+}
+
+#michael-profile {
+  width: 15.47%;
+  margin-right: 5em;
+}
+
+/* Careers styling */
+#careers {
+  height: 1080px;
+}
+
+.body-text {
+  margin-top: 15em;
+  margin-left: 22em;
+  margin-right: 22em;
+  margin-bottom: 0;
+  position: relative;
+  top: -46em;
+}
+
+#careers h2 {
+  position: relative;
+  top: -7em;
+}
+
+#careers:before {
+  content: "positions";
+  z-index: -1;
+  position: relative;
+  left: -0.17em;
+  top: -0.15em;
+  font-family: Outfit;
+  font-size: 450px;
+  font-weight: 550;
+  color: #903434;
+  opacity: 50%;
+}
+
+.body-text:before {
+  content: "coming";
+  z-index: -1;
+  position: relative;
+  top: 0.3em;
+  right: 0.15em;
+  font-family: Outfit;
+  font-size: 450px;
+  font-weight: 550;
+  color: #903434;
+  opacity: 50%;
+}
+
+#careers p {
+  font-family: Outfit;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: left;
+  position: relative;
+  top: -22em;
+  line-height: 2.5em;
+}
+
+/* Contact us styling */
+#contact h2 {
+  width: 25%;
+  z-index: -1;
+}
+
+form {
+  position: relative;
+  top: -5em;
+  right: 8em;
+  padding-top: 5em;
+  height: 1080px;
+  margin: 0 10em;
+  font-family: Outfit;
+  font-size: 16px;
+  background-image: url('./images/logo.png');
+  background-size: 1200px 1080px;
+  background-repeat: no-repeat;
+  background-position-x: right;
+  overflow-y: visible;
+  text-align: left;
+}
+
+form p {
+  position: relative;
+  top: -3em;
+  left: 5em;
+}
+
+input::placeholder,
+textarea::placeholder,
+textarea,
+input[type=submit],
+input[type=text],
+input[type=email] {
+  font-family: Outfit;
+  font-size: 16px;
+}
+
+input[type=submit] {
+  background-color: #A6313A;
+  border: #A6313A;
+  color: white;
+  padding: 0.5em;
+  border-radius: 10%;
+  margin-top: 1em;
+  width: fit-content;
+}
+
+input[type=submit]:hover {
+  color: black;
+}
+
+.text-input {
+  padding: 0.5em;
+  width: 30em;
+}
+
+textarea {
+  padding: 0.5em;
+  width: 30em;
+  height: 10em;
+}
+
+#contact p {
+  margin-top: 12em;
+  margin-left: -5em;
+  font-family: Outfit;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: left;
+  position: relative;
+  line-height: 2.5em;
+}
+
+
+/* Footer styling */
+footer {
+  background-color: #A6313A;;
+  position: absolute;
+  clear: right;
+  width: 1920px;
+  top: 448em;
+}
+
+footer h6 {
+  color: white;
+  font-weight: normal;
+  font-family: Outfit;
+  font-size: 15px;
+  text-align: left;
+}

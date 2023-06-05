@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Taaurus</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+</head>
+<body>
+  <header>
+    <ul>
+      <!-- Logo at the top left -->
+      <li class='top' id='icon'>
+        <img src="./images/favicon.ico"/>
+      </li>
+
+      <!-- Navigation bar at the top of the main page -->
+      <li class='top' id='navigation'>
+        <nav class="main-page">
+          <ul>
+            <li class='menu-item'><a href='#services'><h4>services</h4></a
+              ></li>
+            <li class='menu-item'><a href='#team'><h4>team</h4></a></li>
+            <li class='menu-item'><a href='#careers'><h4>careers</h4></a></li>
+            <li class='menu-item'><a href='#contact'><h4>contact us</h4></a
+              ></li>
+          </ul>
+        </nav>
+      </li>
+    </ul>
+  </header>
+  <main>
+    <h1></h1>
+    <div class='odd-text' id='quote'>
+      <h3>
+        <p>To see the world, things dangerous to come to,</p>
+        <p>to see behind walls, draw closer,</p>
+        <p>to find each other, and to feel.</p>
+        <p>That is the purpose of life.</p>
+      </h3>
+    </div>
+    <div class='main-sections' id='services'>
+      <h2>Services</h2>
+      <ul>
+        <li class='arrow' id='left'>
+          <span>&lt</span>
+        </li>
+        <li class='media'>
+          <!-- Put the services video in here -->
+          <div id='caption'>
+            <p><h1>Consultancy</h1></p>
+            <p><h2>Websites</h2></p>
+          </div>
+        </li>
+        <li class='arrow' id='right'>
+          <span>></span>
+        </li>
+      </ul>
+    </div>
+    <div class='odd-text' id='services-team'>
+      <h3>
+        <p>Now you know a bit about what we do here...</p>
+        <p>You should meet the team behind it!</p>
+      </h3>
+    </div>
+    <div class='main-sections' id='team'>
+      <h2>Team</h2>
+      <ul>
+        <li class='text' id='michael-text'>
+          <h3><p>Michael Hammond</p></h3>
+          <h4><p>Chief Executive Officer</p></h4>
+          <h5><p>As founder of Taaurus, Michael has always been problem
+          solving-oriented. He technically has degrees in Engineering and
+          Science, and brings programming skills to the team. Michael has worked
+          in Engineering based roles previously, but found programming to be his
+          calling.</p></h5>
+        </li>
+        <li class='profile' id='michael-profile'>
+          <img src="./images/michael.png"/>
+        </li>
+        <li class='profile' id='roger-profile'>
+          <img src="./images/roger.png"/>
+        </li>
+        <li class='text' id='roger-text'>
+          <h3><p>Roger Lambert</p></h3>
+          <h4><p>Chief Creative Officer</p></h4>
+          <h5><p>The co-founder of Taaurus, Roger has always been creative-
+          oriented, finding interest in art and design from a young age, he
+          knew he could find purpose in creating for other people. Roger has a
+          degree in game design, and brings graphic design and animation
+          experience to the team.</p></h5>
+        </li>
+      </ul>
+    </div>
+    <div class='main-sections' id='careers'>
+      <h2>Careers</h2>
+      <div class='body-text'>
+        <p>We are an emerging company, wanting to expand in the future, dealing
+        with innovative steps in the space of Technology.</p>
+        <p>We want to make a difference and want to hopefully expand and
+        thrive.</p>
+        <br>
+        <p>Watch closely for positions coming soon!</p>
+        <br>
+        <p>From the Taaurus Team</p>
+      </div>
+    </div>
+    <div class='main-sections' id='contact'>
+      <h2>Contact Us</h2>
+      <form method='POST'
+       action='https://formsubmit.co/michaelhammond491@gmail.com'>
+        <label for='name'>Name</label>
+        <br>
+        <input class='text-input' type='text' name='name' required
+        placeholder='Your Name'/>
+        <br>
+        <br>
+        <label for='email'>Email</label>
+        <br>
+        <input class='text-input' type='email' name='email' required
+        placeholder='Your Email'/>
+        <input type="hidden" name="_autoresponse"
+        value="Thank you for your message, we'll get back to you as soon as we
+        can! Sincerely, The Taaurus Team">
+        <br>
+        <br>
+        <label for='phone'>Phone</label>
+        <br>
+        <input class='text-input' type='text' name='phone' required
+        placeholder='Your Phone'/>
+        <br>
+        <br>
+        <label for='message'>Message</label>
+        <br>
+        <textarea name='message' placeholder='Your Message' required
+        ></textarea>
+        <br>
+        <br>
+        <input class='submit-button' type='submit' name='submit'
+        value='Submit'/>
+        <!--<input type='hidden' name='_captcha' value='false'/>-->
+        <input type="hidden" name='_next'
+        value='https://www.taaurus.com.au/submitted.html#contact'/>
+        <input type="hidden" name='_subject' value='New Taaurus Query!'/>
+      </form>
+    </div>
+  </main>
+</body>
+<footer>
+  <h6>&copy; Copyright. All Rights Reserved.</h6>
+</footer>
+</html>
