@@ -16,7 +16,7 @@
 html {
   scroll-behavior:smooth;
   scrollbar-width: none; /* for Firefox */
-  width: 1920px;
+  width: min(1920px, 100vw);
   justify-content: center;
   margin: 0 auto;
   transform-origin: center;
@@ -30,7 +30,7 @@ body {
   overflow-y: scroll;
   overflow: -moz-scrollbars-none;
   font-size: 100%;
-  width: 1920px;
+  width: min(1920px, 100vw);
   text-align: center;
 }
 
@@ -43,51 +43,62 @@ header {
   position: fixed;
   background-color: white;
   top: 0;
-  width: 1920px;
+  width: min(1920px, 100vw);
   height: 3.5em;
   z-index: 1;
 }
 
-header ul {
-  margin: 0;
-  height:  0em;
+.header-bar {
+  position: relative;
+  height: 3.25em;
   padding: 0.5em 0.5em;
-  width: 1920px;
 }
 
-header li {
+header .top {
   display: inline-block;
 }
 
 /* Icon styling */
 #icon {
+  width: min(10%, 10vw);
+  float: left;
   position: relative;
-  left: -58em;
-  width: 2em;
+
 }
 
 header img {
   width: 2em;
+  float: left;
 }
 
 /* Navigation styling */
 header nav {
   text-align: center;
+  height: 3em;
 }
 
 header #navigation {
+  float: right;
+  margin-left: 10%;
+  width: 80%;
   position: absolute;
-  top: 0;
-  width: 0em;
-  margin-top: 0.2em;
-  margin-left: -60em;
-  padding: 0.5em 0.5em;
+  top: 0.25em;
+  left: 0;
+  height: 3em;
   text-align: center;
+}
+
+.nav-options {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 nav li {
   display: inline-block;
   width: 8em;
+  height: 1.5em;
 }
 
 nav a {
@@ -110,11 +121,11 @@ nav h4 {
 /* Main styling */
 main {
   position: relative;
-  top: 3em;
   background-image: url("./images/Website_banner.png");
   background-repeat: no-repeat;
-  margin-top: -3.5em;
-  padding: 0;
+  background-position: top center;
+  width: min(100%, 100vw);
+
 }
 
 main h1 {
