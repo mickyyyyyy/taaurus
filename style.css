@@ -484,15 +484,16 @@ footer h6 {
 @media only screen and (max-width: 1920px) {
 
   header {
-    height: 9vh;
+    height: 7vh;
   }
 
   header nav {
-    height: 8vh;
+    height: 7vh;
   }
 
   header #navigation {
-    height: 8vh;
+    height: 7vh;
+    top: 0;
   }
 
   header img {
@@ -542,7 +543,26 @@ footer h6 {
 
 }
 
+@media only screen and (max-width: 1200px) {
+  header {
+    height: 9vh;
+  }
+
+  header nav {
+    height: 9vh;
+  }
+
+  header #navigation {
+    top: 0.5vh;
+    height: 9vh;
+  }
+}
+
 @media only screen and (max-width: 1000px) {
+
+  header #navigation {
+    top: 1vh;
+  }
 
   .nav-options li h4 {
     font-size: min(14px);
@@ -554,6 +574,7 @@ footer h6 {
 
   #careers {
     height: 500vh;
+
   }
 
   footer {
@@ -562,6 +583,10 @@ footer h6 {
 }
 
 @media only screen and (max-width: 800px) {
+  header #navigation {
+    top: 1.2vh;
+  }
+
   .nav-options li h4 {
     font-size: min(12px);
   }
@@ -588,5 +613,27 @@ footer h6 {
 
   #careers {
     height: 1000vh;
+  }
+
+  footer {
+    top: 650em;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  #team {
+    height: 800vh;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  #team {
+    height: 1000vh;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  #team {
+    height: 1200vh;
   }
 }
