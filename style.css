@@ -4,6 +4,8 @@
   padding: 0;
   box-sizing: border-box;
   width: 100%;
+  /*overflow-x: hidden;
+  overflow-y: visible;*/
 }
 
 /* Importing fonts */
@@ -16,7 +18,7 @@
 html {
   scroll-behavior:smooth;
   scrollbar-width: none; /* for Firefox */
-  width: min(1920px, 100vw);
+  width: min(1920px, 100%);
   justify-content: center;
   margin: 0 auto;
   transform-origin: center;
@@ -30,7 +32,7 @@ body {
   overflow-y: scroll;
   overflow: -moz-scrollbars-none;
   font-size: 100%;
-  width: min(1920px, 100vw);
+  width: min(1920px, 100%);
   text-align: center;
 }
 
@@ -43,7 +45,8 @@ header {
   position: fixed;
   background-color: white;
   top: 0;
-  width: min(1920px, 100vw);
+  width: min(1920px, 100%);
+  max-width: 100%;
   height: 3.5em;
   z-index: 2;
 }
@@ -51,6 +54,7 @@ header {
 .header-bar {
   position: relative;
   height: 3.25em;
+  max-width: 100%;
   padding: 0.5em 0.5em;
 }
 
@@ -86,6 +90,7 @@ header #navigation {
   left: 0;
   height: 3em;
   text-align: center;
+  overflow-y: visible;
 }
 
 .nav-options {
@@ -124,7 +129,7 @@ main {
   background-image: url("./images/Website_banner.png");
   background-repeat: no-repeat;
   background-position: top center;
-  width: min(100%, 100vw);
+  width: 100%;
 
 }
 
@@ -142,16 +147,17 @@ main h1 {
 .odd-text {
   margin-top: 5em;
   margin-bottom: 5em;
-  width: 100%;
+  width: 90%;
   padding: min(8em, 5vw);
   text-align: left;
+  overflow-x: hidden;
 }
 
 .odd-text h3 {
   width: 100%;
   font-family: Outfit;
   font-weight: bold;
-  font-size: 70px;
+  font-size: 55px;
   color: #944444;
 }
 
@@ -339,9 +345,11 @@ span {
 }
 
 .body-text {
-  height: 100%;
+  height: auto;
   position: relative;
-  width: auto;
+  width: max(1920px, 100%);
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 .body-text:before {
@@ -349,25 +357,31 @@ span {
   z-index: -1;
   position: relative;
   left: -0.17em;
-  top: -0.35em;
+  top: -0.25em;
   font-family: Outfit;
   font-size: 450px;
   font-weight: 550;
   color: #903434;
   opacity: 50%;
+  max-width: 100vw;
+  width: max(1920px, 100vw);
+  overflow-x: hidden;
 }
 
 .body-text:after {
   content: "coming";
   z-index: -1;
   position: relative;
-  top: -1.25em;
+  top: -1.35em;
   right: -0.5em;
   font-family: Outfit;
   font-size: 450px;
   font-weight: 550;
   color: #903434;
   opacity: 50%;
+  max-width: 100vw;
+  width: max(1920px, 100vw);
+  overflow-x: hidden;
 }
 
 #careers p {
@@ -388,6 +402,7 @@ span {
   background-size: 1200px 1080px;
   background-repeat: no-repeat;
   background-position: center right;
+  overflow-x: hidden;
 }
 
 #contact h2 {
@@ -469,8 +484,10 @@ footer {
   background-color: #A6313A;;
   position: absolute;
   clear: right;
-  width: 1920px;
+  width: max(1920px, 100vw);
+  max-width: 100vw;
   top: 450em;
+  left: 0;
 }
 
 footer h6 {
@@ -499,7 +516,7 @@ footer h6 {
   header img {
     position: fixed;
     left: 1vw;
-    top: 1.5vh;
+    top: 0.5vw;
     width: 2vw;
   }
 
@@ -538,30 +555,47 @@ footer h6 {
   }
 
   footer {
-    top: 1000em;
+    top: 900em;
   }
 
 }
 
 @media only screen and (max-width: 1200px) {
   header {
-    height: 9vh;
+    height: 4vw;
   }
 
   header nav {
-    height: 9vh;
+    height: 4vw;
+  }
+
+  header img {
+    top: 0.75vw;
   }
 
   header #navigation {
-    top: 0.5vh;
-    height: 9vh;
+    top: 0.25vw;
+    height: 4vw;
+  }
+
+  main {
+    top: -5vw;
+  }
+
+  .arrow {
+    top: 11vw;
+  }
+
+
+  footer {
+    top: 725em;
   }
 }
 
 @media only screen and (max-width: 1000px) {
 
   header #navigation {
-    top: 1vh;
+    top: 0.5vh;
   }
 
   .nav-options li h4 {
@@ -569,26 +603,46 @@ footer h6 {
   }
 
   .nav-options li {
-    width: 13vw;
+    width: 17.5vw;
+  }
+
+  main {
+    top: -6vw;
   }
 
   #careers {
     height: 500vh;
-
   }
 
   footer {
-    top: 900em;
+    top: 750em;
   }
 }
 
 @media only screen and (max-width: 800px) {
+  header {
+    height: 4vw;
+  }
+
+  header nav {
+    height: 4vw;
+  }
+
   header #navigation {
-    top: 1.2vh;
+    top: 1vw;
+    height: 2.5vw;
+  }
+
+  header #navigation li {
+    width: 17.5vw;
   }
 
   .nav-options li h4 {
     font-size: min(12px);
+  }
+
+  main {
+    top: -5.6em;
   }
 
   #careers {
@@ -597,6 +651,10 @@ footer h6 {
 }
 
 @media only screen and (max-width: 700px) {
+  header #navigation {
+    top: 1vw;
+  }
+
   .nav-options li h4 {
     font-size: min(10px);
   }
@@ -607,12 +665,21 @@ footer h6 {
 }
 
 @media only screen and (max-width: 600px) {
+html {
+  width: 100vw;
+  max-width: 100vw;
+}
+
+  header #navigation {
+    top: 1.25vw;
+  }
+
   .nav-options li h4 {
     font-size: min(8px);
   }
 
   #careers {
-    height: 1000vh;
+    height: 500vw;/*1000vh;*/
   }
 
   footer {
@@ -621,6 +688,10 @@ footer h6 {
 }
 
 @media only screen and (max-width: 500px) {
+  header #navigation {
+    top: 1.5vw;
+  }
+
   #team {
     height: 800vh;
   }
@@ -634,6 +705,18 @@ footer h6 {
 
 @media only screen and (max-width: 400px) {
   #team {
-    height: 1200vh;
+    height: 550vw;
+  }
+
+  #careers {
+    height: 375vw;
+  }
+
+  main {
+    top: -6em;
+  }
+
+  footer {
+    top: 650em;
   }
 }
