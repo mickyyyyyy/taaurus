@@ -3,9 +3,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  width: 100%;
-  /*overflow-x: hidden;
-  overflow-y: visible;*/
 }
 
 /* Importing fonts */
@@ -15,95 +12,30 @@
 }
 
 /* Smooth scrolling */
-html {
-  scroll-behavior:smooth;
-  scrollbar-width: none; /* for Firefox */
-  width: min(1920px, 100%);
-  justify-content: center;
-  margin: 0 auto;
-  transform-origin: center;
-}
-
-/* Body styling */
-body {
-  background-color: #F5F5F5;
-  /* hide scrollbar but allow scrolling */
-  -ms-overflow-style: none; /* for Internet Explorer, Edge */
-  overflow-y: scroll;
-  overflow: -moz-scrollbars-none;
-  font-size: 100%;
-  width: min(1920px, 100%);
-  text-align: center;
-}
-
-body::-webkit-scrollbar {
-  display: none; /* for Chrome, Safari, and Opera */
-}
+html{scroll-behavior:smooth}
 
 /* Header styling */
 header {
-  position: fixed;
-  background-color: white;
-  top: 0;
-  width: min(1920px, 100%);
-  max-width: 100%;
-  height: 3.5em;
-  z-index: 2;
-}
-
-.header-bar {
+	background-image: url("images/background.png");
   position: relative;
-  height: 3.25em;
-  max-width: 100%;
-  padding: 0.5em 0.5em;
+  left: 10%;
+  display: flex;
+  width: 90%;
 }
 
-header .top {
-  display: inline-block;
-}
-
-/* Icon styling */
-#icon {
-  width: min(10%, 10vw);
-  float: left;
-  position: relative;
-
-}
-
-header img {
-  width: 2em;
-  float: left;
+.main-page {
+  width: 50%;
 }
 
 /* Navigation styling */
-header nav {
-  text-align: center;
-  height: 3em;
-}
-
-header #navigation {
-  float: right;
-  margin-left: 10%;
-  width: 80%;
-  position: absolute;
-  top: 0.25em;
-  left: 0;
-  height: 3em;
-  text-align: center;
-  overflow-y: visible;
-}
-
-.nav-options {
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+nav ul {
+  width: 100%;
+  display: inline-block;
 }
 
 nav li {
-  display: inline-block;
-  width: 8em;
-  height: 1.5em;
+  display: block;
+  padding: 50px 0px;
 }
 
 nav a {
@@ -116,607 +48,185 @@ nav h4:hover {
 
 nav h4 {
 	font-family: Outfit;
-	font-weight: bold;
-	font-size: 16px;
-  text-align: center;
-  text-transform: uppercase;
-  color: #565555;
+	font-weight: 300;
+	font-size: 75px;
+  color: white;
+  padding-left: 50px;
+	/*text-transform: uppercase;*/
 }
 
-/* Main styling */
+/* Logo styling */
+#logo {
+  display: table;
+  margin: auto 0;
+  justify-content: center;
+  color: white;
+  font-size: 25px;
+  border: 1px solid white;
+  margin: auto 4em; /*100px;*/
+  height: 20em;/*500px;*/
+  width: 12em; /*300px;*/
+}
+
+table {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+td {
+  height: 300px;
+}
+
+/* Main section styling */
 main {
+  background-image: url("images/background.png");
   position: relative;
-  background-image: url("./images/Website_banner.png");
-  background-repeat: no-repeat;
-  background-position: top center;
-  width: 100%;
-
-}
-
-main h1 {
-  height: 1080px;
-  margin: 0 0;
-  text-transform: uppercase;
-  font-family: Outfit;
-  font-weight: bold;
-  font-size: 128px;
-  text-align: center;
-}
-
-/* Quote styling */
-.odd-text {
-  margin-top: 5em;
-  margin-bottom: 5em;
+  left: 10%;
   width: 90%;
-  padding: min(8em, 5vw);
-  text-align: left;
-  overflow-x: hidden;
-}
-
-.odd-text h3 {
-  width: 100%;
-  font-family: Outfit;
-  font-weight: bold;
-  font-size: 55px;
-  color: #944444;
-}
-
-.odd-text p {
-  padding: 0.2em 0;
-}
-
-.main-sections {
-  width: 100%;
-  padding-left: min(2em, 2vw);
-  padding-right: min(2em, 2vw);
-  padding-bottom: 10em;
-  padding-top: 3em;
 }
 
 h2 {
   font-family: Outfit;
-  font-size: 80px;
-  font-weight: bold;
-  color: #792B2B;
-  padding-bottom: 0.5em;
-  text-align: left;
+  font-weight: 300;
+  font-size: 75px;
+  color: white;
+  padding-top: 50px;
+  padding-left: 50px;
 }
 
 /* Services styling */
-#services {
-  height: auto;
-  width: min(1920px, 100vw);
+#services table {
+  margin-left: auto;
+  margin-right: auto;
+  font-family: Outfit;
+  font-size: 25px;
+  color: white;
+  border-spacing: 50px 50px;
 }
 
-#services ul {
-  height: min(750px, 50vw);
+#services td {
+  border: 1px solid white;
+  border-radius: 25%;
+  width: 250px;
+  height: 250px;
+  text-align: center;
+}
+
+#services td:hover {
   background-color: black;
 }
 
-#services li {
-  display: inline-block;
-}
-
-.media {
-  /*width: min(90em, 70vw);*/
-  /*height: min(45em, 35vw);*/
-  transform: translateY(-0%);
-  width: min(100em, 70vw);
-  height: min(750px, 50vw);
-  margin: 0;
-  position: relative;
-}
-
-#caption {
-  text-align: center;
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-#caption:hover {
-  transform: translateY(-50%) scale(1.1);
-}
-
-#caption h1,
-#caption h2 {
-  height: 1.5em;
-  text-transform: none;
-  text-align: center;
-  width: auto;
-  color: white;
-  margin: 0 auto;
-  position: relative;
-}
-
-#caption h1 {
-  padding: 0;
-  font-size: min(50px, 5vw);
-}
-
-#caption h2 {
-  font-size: min(35px, 3.5vw);
-}
-
-.arrow {
-  position: relative;
-  font-size: min(100px, 10vw);
-  top: min(2.25em, 30vh);
-  width: min(1em, 12vw);
-  height: min(3em, 80vh);
-}
-
-#left {
-  left: 1em;
-  float: left;
-  z-index: 1;
-}
-
-#right {
-  right: 1em;
-  float: right;
-}
-
-span:hover {
-	color: #8E8989;
-}
-
-video {
-  width: 100%;
-  text-align: center;
-}
-
-span {
-  position: relative;
-  color: white;
-  top: 50%;
-  width: min(1em, 5vw);
-  height: 1.25em;
-  display: inline-block;
-  transform: translateY(-50%) scaleY(2);
-}
-
-/* Introduction to team section styling */
-#services-team {
-  padding-top: 0;
-  text-align: right;
-}
-
 /* Team styling */
-#team {
-  height: 1080px;
+#team h2 {
+  padding-bottom: 50px;
 }
 
-#team .team-member {
-  display: inline-block;
-  width: 45%;
+#team table {
+  margin-left: auto;
+  margin-right: auto;
+  border-color: white;
+  border-spacing: 50px 0px;
 }
 
-.team-member div {
-  width: 40%;
+td {
+  width: 250px;
 }
 
-#roger-profile {
-  width: 39%;
+.profile td {
+  border: 1px solid white;
+  border-radius: 25%;
+  height: 250px;
 }
 
-.left {
-  float: left;
-}
-
-.right {
-  float: right;
-}
-
-.text {
+.name td {
+  height: 25px;
+  padding-top: 25px;
   font-family: Outfit;
-  margin: 0 5em;
-  bottom: 15em;
-}
-
-.text h3 {
-  font-weight: 550;
-  font-size: 32px;
-}
-
-.text h4 {
-  margin-top: 0.5em;
-  font-weight: 550;
+  color: white;
   font-size: 20px;
-}
-
-.text h5 {
-  margin-top: 2em;
-  font-weight: 550px;
-  font-size: 20px;
-  color: #9D4141;
-  line-height: 1.5em;
-}
-
-.profile {
   text-align: center;
+  font-weight: bold;
+}
+
+.position td {
+  height: 25px;
+  padding-bottom: 25px;
+  font-family: Outfit;
+  font-size: 15px;
+  color: white;
+  text-align: center;
+  font-style: italic;
+}
+
+.description td {
+  margin-top: 0;
+  vertical-align: text-top;
+  color: white;
+  font-family: Outfit;
+  font-size: 15px;
 }
 
 /* Careers styling */
-#careers {
-  height: 1080px;
-  width: min(1920px, 100vw);
-}
-
-.body-text {
-  height: auto;
-  position: relative;
-  width: max(1920px, 100%);
-  max-width: 100%;
-  overflow-x: hidden;
-}
-
-.body-text:before {
-  content: "positions";
-  z-index: -1;
-  position: relative;
-  left: -0.17em;
-  top: -0.25em;
-  font-family: Outfit;
-  font-size: 450px;
-  font-weight: 550;
-  color: #903434;
-  opacity: 50%;
-  max-width: 100vw;
-  width: max(1920px, 100vw);
-  overflow-x: hidden;
-}
-
-.body-text:after {
-  content: "coming";
-  z-index: -1;
-  position: relative;
-  top: -1.35em;
-  right: -0.5em;
-  font-family: Outfit;
-  font-size: 450px;
-  font-weight: 550;
-  color: #903434;
-  opacity: 50%;
-  max-width: 100vw;
-  width: max(1920px, 100vw);
-  overflow-x: hidden;
-}
-
 #careers p {
-  font-family: Outfit;
-  font-weight: bold;
-  font-size: 20px;
-  text-align: left;
-  position: relative;
-  line-height: 2.5em;
-  width: min(57.5em, 57.5vw);
-  margin: 0 auto;
-  top: -15em;
-}
-
-/* Contact us styling */
-#contact {
-  background-image: url('./images/logo.png');
-  background-size: 1200px 1080px;
-  background-repeat: no-repeat;
-  background-position: center right;
-  overflow-x: hidden;
-}
-
-#contact h2 {
-  z-index: -1;
-}
-
-form {
-  position: relative;
-  top: -5em;
-  right: 8em;
-  padding-top: 5em;
-  height: 1080px;
-  margin: 0 10em;
-  font-family: Outfit;
-  font-size: 16px;
-  text-align: left;
-}
-
-form p {
-  position: relative;
-  top: -3em;
-  left: 5em;
-}
-
-input::placeholder,
-textarea::placeholder,
-textarea,
-input[type=submit],
-input[type=text],
-input[type=email] {
-  font-family: Outfit;
-  font-size: 16px;
-}
-
-input[type=submit] {
-  background-color: #A6313A;
-  border: 1px solid black;
+  padding: 50px 50px;
   color: white;
-  padding: 0.5em;
-  border-radius: 10%;
-  margin-top: 1em;
-  width: fit-content;
-}
-
-textarea:focus,
-input:focus {
-  outline: none;
-}
-
-input[type=submit]:hover {
-  color: black;
-}
-
-.text-input {
-  padding: 0.5em;
-  width: min(30em, 80vw);
-}
-
-textarea {
-  padding: 0.5em;
-  width: min(30em, 80vw);
-  height: 10em;
-}
-
-#contact p {
-  margin-top: 12em;
-  margin-left: -5em;
   font-family: Outfit;
-  font-weight: bold;
-  font-size: 20px;
-  text-align: left;
-  position: relative;
-  line-height: 2.5em;
 }
 
+/* Contact styling */
+#contact p {
+  padding-top: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
+  color: white;
+  font-family: Outfit;
+}
+
+#contact form {
+  padding: 50px 50px;
+}
+
+#contact #message {
+  display: flex;
+}
+
+#contact label {
+  color: white;
+  font-family: Outfit;
+  display: inline-block;
+  width: 100px;
+  text-align: right;
+  top: 0;
+}
+
+#contact textarea {
+  width: 500px;
+  height: 200px;
+  color: black;
+  font-size: 15px;
+  font-family: Outfit;
+  margin-left: 5px;
+  margin-top: 2px;
+}
+
+#contact #submit {
+  margin-left: 105px;
+  margin-top: 10px;
+}
+
+#contact #submit-button {
+  font-family: Outfit;
+  color: white;
+  background-color: black;
+}
 
 /* Footer styling */
 footer {
-  background-color: #A6313A;;
-  position: absolute;
-  clear: right;
-  width: max(1920px, 100vw);
-  max-width: 100vw;
-  top: 450em;
-  left: 0;
+  background-color: black;
 }
 
 footer h6 {
   color: white;
   font-weight: normal;
-  font-family: Outfit;
   font-size: 15px;
-  text-align: left;
-}
-
-@media only screen and (max-width: 1920px) {
-
-  header {
-    height: 7vh;
-  }
-
-  header nav {
-    height: 7vh;
-  }
-
-  header #navigation {
-    height: 7vh;
-    top: 0;
-  }
-
-  header img {
-    position: fixed;
-    left: 1vw;
-    top: 0.5vw;
-    width: 2vw;
-  }
-
-  main {
-    top: -3.5em;
-    margin-top: 7vh;
-  }
-
-  #team {
-    height: 700vh;
-  }
-
-  #team .team-member {
-    display: block;
-    margin: 10vw 0;
-    width: 100%;
-  }
-
-  #team .left .profile {
-    width: 40vw;
-    margin-right: 5vw;
-  }
-
-  #team .right .profile {
-    width: 40vw;
-    margin-left: 5vw;
-  }
-
-  #team .text {
-    width: 40vw;
-    margin: 0 5vw;
-  }
-
-  #careers {
-    height: 300vh;
-  }
-
-  footer {
-    top: 900em;
-  }
-
-}
-
-@media only screen and (max-width: 1200px) {
-  header {
-    height: 4vw;
-  }
-
-  header nav {
-    height: 4vw;
-  }
-
-  header img {
-    top: 0.75vw;
-  }
-
-  header #navigation {
-    top: 0.25vw;
-    height: 4vw;
-  }
-
-  main {
-    top: -5vw;
-  }
-
-  .arrow {
-    top: 11vw;
-  }
-
-
-  footer {
-    top: 725em;
-  }
-}
-
-@media only screen and (max-width: 1000px) {
-
-  header #navigation {
-    top: 0.5vh;
-  }
-
-  .nav-options li h4 {
-    font-size: min(14px);
-  }
-
-  .nav-options li {
-    width: 17.5vw;
-  }
-
-  main {
-    top: -6vw;
-  }
-
-  #careers {
-    height: 500vh;
-  }
-
-  footer {
-    top: 750em;
-  }
-}
-
-@media only screen and (max-width: 800px) {
-  header {
-    height: 4vw;
-  }
-
-  header nav {
-    height: 4vw;
-  }
-
-  header #navigation {
-    top: 1vw;
-    height: 2.5vw;
-  }
-
-  header #navigation li {
-    width: 17.5vw;
-  }
-
-  .nav-options li h4 {
-    font-size: min(12px);
-  }
-
-  main {
-    top: -5.6em;
-  }
-
-  #careers {
-    height: 700vh;
-  }
-}
-
-@media only screen and (max-width: 700px) {
-  header #navigation {
-    top: 1vw;
-  }
-
-  .nav-options li h4 {
-    font-size: min(10px);
-  }
-
-  #careers {
-    height: 800vh;
-  }
-}
-
-@media only screen and (max-width: 600px) {
-html {
-  width: 100vw;
-  max-width: 100vw;
-}
-
-  header #navigation {
-    top: 1.25vw;
-  }
-
-  .nav-options li h4 {
-    font-size: min(8px);
-  }
-
-  #careers {
-    height: 500vw;/*1000vh;*/
-  }
-
-  footer {
-    top: 650em;
-  }
-}
-
-@media only screen and (max-width: 500px) {
-  header #navigation {
-    top: 1.5vw;
-  }
-
-  #team {
-    height: 800vh;
-  }
-}
-
-@media only screen and (max-width: 420px) {
-  #team {
-    height: 1000vh;
-  }
-}
-
-@media only screen and (max-width: 400px) {
-  #team {
-    height: 550vw;
-  }
-
-  #careers {
-    height: 375vw;
-  }
-
-  main {
-    top: -6em;
-  }
-
-  footer {
-    top: 650em;
-  }
 }
