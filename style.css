@@ -157,7 +157,7 @@ main h1 {
   width: 100%;
   font-family: Outfit;
   font-weight: bold;
-  font-size: 55px;
+  font-size: 45px;
   color: #944444;
 }
 
@@ -340,8 +340,15 @@ span {
 
 /* Careers styling */
 #careers {
+  padding-left: 0;
+  padding-right: 0;
   height: 1080px;
   width: min(1920px, 100vw);
+}
+
+#careers h2 {
+  padding-left: min(2em, 2vw);
+  padding-right: min(2em, 2vw);
 }
 
 .body-text {
@@ -356,7 +363,7 @@ span {
   content: "positions";
   z-index: -1;
   position: relative;
-  left: -0.17em;
+  left: -0.10em;
   top: -0.25em;
   font-family: Outfit;
   font-size: 450px;
