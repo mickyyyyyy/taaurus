@@ -18,7 +18,7 @@
   from retail, engineering, and manufacturing, to personal websites including
   portfolios and resumes.">
   <meta name="keywords" content="web design and development services taaurus
-  Taaurus"/>
+  Taaurus taurus Taurus"/>
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
 </head>
@@ -49,9 +49,9 @@
     <h1></h1>
     <div class='odd-text' id='quote'>
       <h3>
-        <p>We provide web development services</p>
-        <p>From retail, engineering, and manufacturing</p>
-        <p>To personal websites including portfolios and resumes</p>
+        <p>We provide web development services,</p>
+        <p>from retail, engineering, and manufacturing,</p>
+        <p>to personal websites including portfolios and resumes.</p>
         <!--
         <p>To see the world, things dangerous to come to,</p>
         <p>to see behind walls, draw closer,</p>
@@ -62,21 +62,46 @@
     </div>
     <div class='main-sections' id='services'>
       <h2>Services</h2>
-      <ul>
-        <li class='arrow' id='left'>
-          <span>&lt</span>
-        </li>
-        <li class='media'>
-          <!-- Put the services video in here -->
-          <div id='caption'>
-            <p><h1>Consultancy</h1></p>
-            <p><h2>Websites</h2></p>
+      <div class='example-subsection'>
+        <div class='arrow'>
+          <a><span id='back-button'>&lt</span></a>
+        </div>
+        <div class='example-wrapper' id='services-examples'>
+          <div class='example-websites'>
+            <div class='media' id='consultancy'>
+              <!-- Put the consultancy video in here -->
+              <div class='caption'>
+                <p><h1>Consultancy</h1></p>
+                <p><h2>Websites</h2></p>
+              </div>
+            </div>
+            <div class='media' id='retail'>
+              <!-- Put the retail video in here -->
+              <div class='caption'>
+                <p><h1>Retail</h1></p>
+                <p><h2>Websites</h2></p>
+              </div>
+            </div>
+            <div class='media' id='manufacturing'>
+              <!-- Put the manufacturing video in here -->
+              <div class='caption'>
+                <p><h1>Manufacturing</h1></p>
+                <p><h2>Websites</h2></p>
+              </div>
+            </div>
+            <div class='media' id='resume'>
+              <!-- Put the resume video in here -->
+              <div class='caption'>
+                <p><h1>Resume</h1></p>
+                <p><h2>Websites</h2></p>
+              </div>
+            </div>
           </div>
-        </li>
-        <li class='arrow' id='right'>
-          <span>></span>
-        </li>
-      </ul>
+        </div>
+        <div class='arrow'>
+          <a><span id='forward-button'>></span></a>
+        </div>
+      </div>
     </div>
     <div class='odd-text' id='services-team'>
       <h3>
@@ -170,8 +195,9 @@
       </form>
     </div>
   </main>
+  <footer>
+    <h6>&copy; Copyright. All Rights Reserved.</h6>
+  </footer>
+  <script src="services-examples.js"/></script>
 </body>
-<footer>
-  <h6>&copy; Copyright. All Rights Reserved.</h6>
-</footer>
 </html>
