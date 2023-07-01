@@ -186,41 +186,82 @@ h2 {
 #services {
   height: auto;
   width: min(1920px, 100vw);
+
 }
 
-#services ul {
-  height: min(750px, 50vw);
-  background-color: black;
+.example-subsection {
+  display: flex;
+  align-items: center;
 }
 
-#services li {
+.example-wrapper {
+  overflow-x: scroll;
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.example-wrapper::-webkit-scrollbar {
+    display: none;  /* Safari and Chrome */
+}
+
+.example-websites {
+  height: min(784px, 40vw);
+  width: calc(400%);
+  text-align: left;
+}
+
+.example-websites .media {
   display: inline-block;
+  width: 100%;
+}
+
+#services .media {
+  height: min(784px, 40vw);
+  display: inline-block;
+  width: 25%;
+  float: left;
 }
 
 .media {
+  display: inline-block;
   /*width: min(90em, 70vw);*/
   /*height: min(45em, 35vw);*/
-  transform: translateY(-0%);
-  width: min(100em, 70vw);
-  height: min(750px, 50vw);
+  height: min(784px, 100%);
   margin: 0;
   position: relative;
 }
 
-#caption {
+#consultancy {
+  background-color: black;
+}
+
+#retail {
+  background-color: #792B2B;
+}
+
+#manufacturing {
+  background-color: blue;
+}
+
+#resume {
+  background-color: green;
+}
+
+.caption {
   text-align: center;
   margin: 0;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  transition: transform 0.25s;
 }
 
-#caption:hover {
+.caption:hover {
   transform: translateY(-50%) scale(1.1);
 }
 
-#caption h1,
-#caption h2 {
+.caption h1,
+.caption h2 {
   height: 1.5em;
   text-transform: none;
   text-align: center;
@@ -230,36 +271,25 @@ h2 {
   position: relative;
 }
 
-#caption h1 {
+.caption h1 {
   padding: 0;
   font-size: min(50px, 5vw);
 }
 
-#caption h2 {
+.caption h2 {
   font-size: min(35px, 3.5vw);
 }
 
 .arrow {
-  position: relative;
   font-size: min(100px, 10vw);
-  top: min(2.25em, 30vh);
   width: min(1em, 12vw);
   height: min(3em, 80vh);
-}
-
-#left {
-  left: 1em;
-  float: left;
   z-index: 1;
 }
 
-#right {
-  right: 1em;
-  float: right;
-}
-
-span:hover {
-	color: #8E8989;
+.arrow span:hover {
+	color: black;
+  cursor: pointer;
 }
 
 video {
@@ -269,7 +299,7 @@ video {
 
 span {
   position: relative;
-  color: white;
+  color: #8E8989;
   top: 50%;
   width: min(1em, 5vw);
   height: 1.25em;
@@ -279,6 +309,8 @@ span {
 
 /* Introduction to team section styling */
 #services-team {
+  position: relative;
+  width: 100%;
   padding-top: 0;
   text-align: right;
 }
@@ -491,10 +523,10 @@ footer {
   background-color: #A6313A;;
   position: absolute;
   clear: right;
-  width: max(1920px, 100vw);
-  max-width: 100vw;
-  top: 450em;
-  left: 0;
+  margin: 0 auto;
+  width: min(1920px, 100%);
+  max-width: 100%;
+  top: 455em;
 }
 
 footer h6 {
@@ -530,6 +562,14 @@ footer h6 {
   main {
     top: -3.5em;
     margin-top: 7vh;
+  }
+
+  #left {
+    top: calc(20vw - min(1.5em, 40vh));
+  }
+
+  #right {
+    bottom: calc(20vw + min(1.5em, 40vh));
   }
 
   #team {
@@ -588,11 +628,6 @@ footer h6 {
   main {
     top: -5vw;
   }
-
-  .arrow {
-    top: 11vw;
-  }
-
 
   footer {
     top: 725em;
