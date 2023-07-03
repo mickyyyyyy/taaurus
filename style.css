@@ -125,22 +125,39 @@ nav h4 {
 
 /* Main styling */
 main {
-  position: relative;
-  background-image: url("./images/Website_banner.png");
-  background-repeat: no-repeat;
-  background-position: top center;
-  width: 100%;
+  position: absolute;
+  top: 1080px;
+  /*background-image: url("./images/Website_banner.png");*/
+  /*background-repeat: no-repeat;*/
+  /*background-position: top center;*/
+  width: min(1920px, 100%);
+  z-index: 1;
+}
 
+.banner {
+  position: fixed;
+  overflow: hidden;
+  width: min(1920px, 100%);
+  height: 1080px;
+}
+
+video {
+  position: absolute;
+  top: 3.25em;
+  left: 0;
+  z-index: -1;
+  overflow: hidden;
 }
 
 main h1 {
-  height: 1080px;
+/*  height: 1080px;*/
   margin: 0 0;
   text-transform: uppercase;
   font-family: Outfit;
   font-weight: bold;
   font-size: 128px;
   text-align: center;
+  color: yellow;
 }
 
 /* Quote styling */
@@ -151,6 +168,7 @@ main h1 {
   padding: min(8em, 5vw);
   text-align: left;
   overflow-x: hidden;
+  z-index: 1;
 }
 
 .odd-text h3 {
@@ -185,8 +203,7 @@ h2 {
 /* Services styling */
 #services {
   height: auto;
-  width: min(1920px, 100vw);
-
+  /*width: min(1920px, 100vw);*/
 }
 
 .example-subsection {
@@ -198,6 +215,7 @@ h2 {
   overflow-x: scroll;
   -ms-overflow-style: none;  /* Internet Explorer 10+ */
   scrollbar-width: none;  /* Firefox */
+  outline: 3px solid transparent;
 }
 
 .example-wrapper::-webkit-scrollbar {
@@ -206,6 +224,7 @@ h2 {
 
 .example-websites {
   height: min(784px, 40vw);
+  /*width: calc(400%);*/
   width: calc(400%);
   text-align: left;
 }
@@ -227,8 +246,11 @@ h2 {
   /*width: min(90em, 70vw);*/
   /*height: min(45em, 35vw);*/
   height: min(784px, 100%);
+  width: 100%;
   margin: 0;
   position: relative;
+  outline: 10px solid transparent;
+  z-index: 1;
 }
 
 #consultancy {
@@ -559,8 +581,12 @@ footer h6 {
     width: 2vw;
   }
 
-  main {
+  .banner {
     top: -3.5em;
+  }
+
+  main {
+    /*top: -3.5em;*/
     margin-top: 7vh;
   }
 
@@ -625,9 +651,9 @@ footer h6 {
     height: 4vw;
   }
 
-  main {
+  /*main {
     top: -5vw;
-  }
+  }*/
 
   footer {
     top: 725em;
@@ -648,9 +674,9 @@ footer h6 {
     width: 17.5vw;
   }
 
-  main {
+  /*main {
     top: -6vw;
-  }
+  }*/
 
   #careers {
     height: 500vh;
@@ -683,9 +709,9 @@ footer h6 {
     font-size: min(12px);
   }
 
-  main {
+  /*main {
     top: -5.6em;
-  }
+  }*/
 
   #careers {
     height: 700vh;
@@ -707,10 +733,10 @@ footer h6 {
 }
 
 @media only screen and (max-width: 600px) {
-html {
-  width: 100vw;
-  max-width: 100vw;
-}
+  html {
+    width: 100vw;
+    max-width: 100vw;
+  }
 
   header #navigation {
     top: 1.25vw;
@@ -754,9 +780,9 @@ html {
     height: 375vw;
   }
 
-  main {
+  /*main {
     top: -6em;
-  }
+  }*/
 
   footer {
     top: 650em;
