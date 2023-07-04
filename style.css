@@ -131,19 +131,22 @@ main {
   /*background-repeat: no-repeat;*/
   /*background-position: top center;*/
   width: min(1920px, 100%);
+  /*width: 1920px;*/
+  overflow: hidden;
   z-index: 1;
 }
 
 .banner {
   position: fixed;
   overflow: hidden;
-  width: min(1920px, 100%);
+  /*width: min(1920px, 100%);*/
+  justify-content: center;
+  width: min(1920px, 100vw);
   height: 1080px;
 }
 
 video {
   position: absolute;
-  top: 3.25em;
   left: 0;
   z-index: -1;
   overflow: hidden;
@@ -157,7 +160,6 @@ main h1 {
   font-weight: bold;
   font-size: 128px;
   text-align: center;
-  color: yellow;
 }
 
 /* Quote styling */
@@ -580,10 +582,11 @@ footer h6 {
     top: 0.5vw;
     width: 2vw;
   }
-
+  /*
   .banner {
     top: -3.5em;
   }
+  */
 
   main {
     /*top: -3.5em;*/
@@ -656,7 +659,7 @@ footer h6 {
   }*/
 
   footer {
-    top: 725em;
+    top: 750em;
   }
 }
 
@@ -683,7 +686,7 @@ footer h6 {
   }
 
   footer {
-    top: 750em;
+    top: 1050em;
   }
 }
 
@@ -751,7 +754,7 @@ footer h6 {
   }
 
   footer {
-    top: 650em;
+    top: 900em;
   }
 }
 
@@ -772,6 +775,11 @@ footer h6 {
 }
 
 @media only screen and (max-width: 400px) {
+
+  .odd-text {
+    width: 100vw;
+  }
+
   #team {
     height: 550vw;
   }
@@ -785,6 +793,6 @@ footer h6 {
   }*/
 
   footer {
-    top: 650em;
+    top: 700em;
   }
 }
