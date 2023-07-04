@@ -9,10 +9,34 @@ let banner = document.querySelector(".banner");
 let afterBanner = document.querySelector("main");
 let navigationButtons = document.querySelector(".nav-options");
 
+function resizeBanner() {
+
+  // Zoom banner image to the middle (on mobiles/ portrait)
+  if (window.screen.height > window.screen.width) {
+    banner.style.width = `${bannerDefaultWidth}px`;
+    let moveLeft = 0;
+    let moveUp = 0;
+
+    // Center horizontally and vertically
+    if (window.screen.width < banner.clientWidth) {
+      moveLeft = (banner.clientWidth - window.screen.width) / 2;
+      moveUp = (banner.clientHeight - window.screen.height) / 2;
+      banner.style.left = `-${moveLeft}px`;
+      banner.style.top = `-${moveUp}px`;
+    }
+
+  // Fit video to screen size if it's a tablet/ pc (landscape)
+  } else {
+      banner.style.left = '';
+      banner.style.top = '';
+      banner.style.width = `min(${bannerDefaultWidth}px, 100vw)`;
+  }
+};
+
 // Refresh pulls the user back to the top of the website
 if (performance.navigation.type == performance.navigation.TYPE_RELOAD) {
   body.scrollTop = 0;
-}
+};
 
 // Re-calculates the desired banner height
 function reset_banner_height() {
@@ -20,7 +44,12 @@ function reset_banner_height() {
   let offset = afterBanner.offsetTop;
   let bannerHeight = offset - scroll;
   banner.style.height = `${Math.max(bannerHeight, 0)}px`;
-}
+};
+
+// Zoom banner image to the middle (on mobiles)
+window.addEventListener("load", () => {
+  resizeBanner();
+});
 
 // Adjusts the height of the banner when we scroll
 window.addEventListener("scroll", () => {
@@ -81,9 +110,17 @@ backBtn.addEventListener("click", () => {
   scrollContainer.scrollLeft -= services.offsetWidth;
 });
 
-// Adjust the position of the services gallery
+topDist = document.getElementById("top-dist");
+leftDist = document.getElementById("left-dist");
+header = document.querySelector("header");
+bannerDefaultWidth = 1920;
+
 window.addEventListener("resize", () => {
+  // Adjust the position of the services gallery
   scrollContainer.style.scrollBehavior = '';
   scrollContainer.style.transition = '';
   scrollContainer.scrollLeft = services.offsetWidth;
-})
+
+  // Zoom banner image to the middle (on mobiles)
+  resizeBanner();
+});
