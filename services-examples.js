@@ -8,11 +8,31 @@ let body = document.querySelector("html");
 let banner = document.querySelector(".banner");
 let afterBanner = document.querySelector("main");
 let navigationButtons = document.querySelector(".nav-options");
+let header = document.querySelector("header");
+
+bannerDefaultWidth = 1920;
+bannerDefaultHeight = 1080;
+function check_aspect_ratio() {
+
+  // We have a more portrait aspect ratio than 1920 x 1080
+  if ((window.screen.height / window.screen.width) >
+      bannerDefaultHeight / bannerDefaultWidth) {
+    banner.style.width = `${bannerDefaultWidth}px`;
+    banner.style.left = '50%';
+    banner.style.transform = 'translate(-50%, 0%)';
+  } else {
+    banner.style.width = `min(${bannerDefaultWidth}px, 100vw)`;
+    banner.style.left = '';
+    banner.style.transform = '';
+  }
+}
 
 function resizeBanner() {
 
   // Zoom banner image to the middle (on mobiles/ portrait)
-  if (window.screen.height > window.screen.width) {
+  //if (window.screen.height > window.screen.width) {
+  if ((window.screen.height / window.screen.width) >
+      bannerDefaultHeight / bannerDefaultWidth) {
     banner.style.width = `${bannerDefaultWidth}px`;
     let moveLeft = 0;
     let moveUp = 0;
@@ -41,14 +61,16 @@ if (performance.navigation.type == performance.navigation.TYPE_RELOAD) {
 // Re-calculates the desired banner height
 function reset_banner_height() {
   let scroll = body.scrollTop;
-  let offset = afterBanner.offsetTop;
+  let offset = bannerDefaultHeight;//afterBanner.offsetTop;
   let bannerHeight = offset - scroll;
   banner.style.height = `${Math.max(bannerHeight, 0)}px`;
 };
 
 // Zoom banner image to the middle (on mobiles)
 window.addEventListener("load", () => {
+  //check_aspect_ratio();
   resizeBanner();
+  reset_banner_height();
 });
 
 // Adjusts the height of the banner when we scroll
@@ -112,8 +134,6 @@ backBtn.addEventListener("click", () => {
 
 topDist = document.getElementById("top-dist");
 leftDist = document.getElementById("left-dist");
-header = document.querySelector("header");
-bannerDefaultWidth = 1920;
 
 window.addEventListener("resize", () => {
   // Adjust the position of the services gallery
@@ -122,5 +142,6 @@ window.addEventListener("resize", () => {
   scrollContainer.scrollLeft = services.offsetWidth;
 
   // Zoom banner image to the middle (on mobiles)
+  //check_aspect_ratio();
   resizeBanner();
 });

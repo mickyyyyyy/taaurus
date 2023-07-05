@@ -132,24 +132,19 @@ main {
   /*background-position: top center;*/
   width: min(1920px, 100%);
   /*width: 1920px;*/
-  overflow: hidden;
-  z-index: 1;
+  overflow-x: hidden;
 }
 
 .banner {
   position: fixed;
-  overflow: hidden;
-  /*width: min(1920px, 100%);*/
-  justify-content: center;
   width: min(1920px, 100vw);
   height: 1080px;
+  overflow: hidden;
 }
 
 video {
-  position: absolute;
-  left: 0;
-  z-index: -1;
-  overflow: hidden;
+  width: 1920px;
+  display: block;
 }
 
 main h1 {
@@ -316,10 +311,12 @@ h2 {
   cursor: pointer;
 }
 
+/*
 video {
   width: 100%;
   text-align: center;
 }
+*/
 
 span {
   position: relative;
@@ -561,30 +558,47 @@ footer h6 {
   text-align: left;
 }
 
-@media only screen and (max-width: 1920px) {
+@media only screen and (max-width: 1919px) {
 
   header {
-    height: 7vh;
+    height: 4vh;
   }
 
   header nav {
-    height: 7vh;
+    height: 4vh;
   }
 
   header #navigation {
-    height: 7vh;
+    height: 4vh;
     top: 0;
   }
 
+  /*
   header img {
     position: fixed;
     left: 1vw;
     top: 0.5vw;
     width: 2vw;
   }
+  */
+
+  header img {
+    position: fixed;
+    top: 0.85vh;
+    width: 2vh;
+    left: 0.5vw;
+  }
   /*
   .banner {
     top: -3.5em;
+  }
+  */
+
+  /*
+  video {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
   */
 
@@ -666,7 +680,7 @@ footer h6 {
 @media only screen and (max-width: 1000px) {
 
   header #navigation {
-    top: 0.5vh;
+    top: 0vh;
   }
 
   .nav-options li h4 {
@@ -693,6 +707,10 @@ footer h6 {
 @media only screen and (max-width: 800px) {
   header {
     height: 4vw;
+  }
+
+  header img {
+    width: 1.5vh;
   }
 
   header nav {
@@ -736,6 +754,12 @@ footer h6 {
 }
 
 @media only screen and (max-width: 600px) {
+
+  header img {
+    top: 0.5vh;
+    width: 1vh;
+  }
+
   html {
     width: 100vw;
     max-width: 100vw;
@@ -759,6 +783,12 @@ footer h6 {
 }
 
 @media only screen and (max-width: 500px) {
+
+  header img {
+    top: 0.35vh;
+    width: 1vh;
+  }
+
   header #navigation {
     top: 1.5vw;
   }
@@ -769,12 +799,18 @@ footer h6 {
 }
 
 @media only screen and (max-width: 420px) {
+
   #team {
     height: 1000vh;
   }
 }
 
 @media only screen and (max-width: 400px) {
+
+  header img {
+    top: 0.15vh;
+    width: 1vh;
+  }
 
   .odd-text {
     width: 100vw;
