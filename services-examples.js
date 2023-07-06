@@ -30,9 +30,7 @@ function check_aspect_ratio() {
 function resizeBanner() {
 
   // Zoom banner image to the middle (on mobiles/ portrait)
-  //if (window.screen.height > window.screen.width) {
-  if ((window.screen.height / window.screen.width) >
-      bannerDefaultHeight / bannerDefaultWidth) {
+  if (window.screen.height > window.screen.width) {
     banner.style.width = `${bannerDefaultWidth}px`;
     let moveLeft = 0;
     let moveUp = 0;
@@ -49,7 +47,7 @@ function resizeBanner() {
   } else {
       banner.style.left = '';
       banner.style.top = '';
-      banner.style.width = `min(${bannerDefaultWidth}px, 100vw)`;
+      banner.style.width = `min(${bannerDefaultWidth}px, 100%)`;
   }
 };
 
