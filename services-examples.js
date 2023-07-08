@@ -1,73 +1,21 @@
-// Creating a delay function
-function delay(ms) {
-  return new Promise(resolve => setTimeout(resolve, ms));
-}
-
 // Controlling the height of the banner based on the location
 let body = document.querySelector("html");
-let banner = document.querySelector(".banner");
-let afterBanner = document.querySelector("main");
-let navigationButtons = document.querySelector(".nav-options");
-let header = document.querySelector("header");
+//let navigationButtons = document.querySelector(".nav-options");
+let video = document.querySelector("video");
+const bannerDefaultWidth = 1920;
 
-bannerDefaultWidth = 1920;
-bannerDefaultHeight = 1080;
-function check_aspect_ratio() {
-
-  // We have a more portrait aspect ratio than 1920 x 1080
-  if ((window.screen.height / window.screen.width) >
-      bannerDefaultHeight / bannerDefaultWidth) {
-    banner.style.width = `${bannerDefaultWidth}px`;
-    banner.style.left = '50%';
-    banner.style.transform = 'translate(-50%, 0%)';
-  } else {
-    banner.style.width = `min(${bannerDefaultWidth}px, 100vw)`;
-    banner.style.left = '';
-    banner.style.transform = '';
-  }
+// Adjusts the height of the banner as we move up and down the page
+function reset_banner_height() {
+  video.style.top = `${body.scrollTop}px`;
 }
-
-function resizeBanner() {
-
-  // Zoom banner image to the middle (on mobiles/ portrait)
-  if (window.screen.height > window.screen.width) {
-    banner.style.width = `${bannerDefaultWidth}px`;
-    let moveLeft = 0;
-    let moveUp = 0;
-
-    // Center horizontally and vertically
-    if (window.screen.width < banner.clientWidth) {
-      moveLeft = (banner.clientWidth - window.screen.width) / 2;
-      moveUp = (banner.clientHeight - window.screen.height) / 2;
-      banner.style.left = `-${moveLeft}px`;
-      banner.style.top = `-${moveUp}px`;
-    }
-
-  // Fit video to screen size if it's a tablet/ pc (landscape)
-  } else {
-      banner.style.left = '';
-      banner.style.top = '';
-      banner.style.width = `min(${bannerDefaultWidth}px, 100%)`;
-  }
-};
 
 // Refresh pulls the user back to the top of the website
 if (performance.navigation.type == performance.navigation.TYPE_RELOAD) {
   body.scrollTop = 0;
 };
 
-// Re-calculates the desired banner height
-function reset_banner_height() {
-  let scroll = body.scrollTop;
-  let offset = bannerDefaultHeight;//afterBanner.offsetTop;
-  let bannerHeight = offset - scroll;
-  banner.style.height = `${Math.max(bannerHeight, 0)}px`;
-};
-
 // Zoom banner image to the middle (on mobiles)
 window.addEventListener("load", () => {
-  //check_aspect_ratio();
-  resizeBanner();
   reset_banner_height();
 });
 
@@ -78,9 +26,9 @@ window.addEventListener("scroll", () => {
 
 // Allows us to adjust the height based on the new position we're in on the
 // webpage from clicking one of the navigation buttons
-navigationButtons.addEventListener("click", () => {
-  reset_banner_height();
-});
+//navigationButtons.addEventListener("click", () => {
+  //reset_banner_height();
+//});
 
 // Scrolling variables for service page examples gallery
 let scrollContainer = document.querySelector(".example-wrapper");
@@ -130,9 +78,6 @@ backBtn.addEventListener("click", () => {
   scrollContainer.scrollLeft -= services.offsetWidth;
 });
 
-topDist = document.getElementById("top-dist");
-leftDist = document.getElementById("left-dist");
-
 window.addEventListener("resize", () => {
   // Adjust the position of the services gallery
   scrollContainer.style.scrollBehavior = '';
@@ -140,6 +85,5 @@ window.addEventListener("resize", () => {
   scrollContainer.scrollLeft = services.offsetWidth;
 
   // Zoom banner image to the middle (on mobiles)
-  //check_aspect_ratio();
-  resizeBanner();
+  reset_banner_height();
 });

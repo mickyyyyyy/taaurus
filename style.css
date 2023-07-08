@@ -136,15 +136,17 @@ main {
 }
 
 .banner {
-  position: fixed;
-  width: min(1920px, 100vw);
-  height: 1080px;
   overflow: hidden;
+  width: 100%;
+  height: min(1080px, 100vh);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 video {
-  width: min(1920px, 100%);
-  display: block;
+  position: relative;
+  width: min(1920px, 100vw);
 }
 
 main h1 {
@@ -601,6 +603,11 @@ footer h6 {
     transform: translate(-50%, -50%);
   }
   */
+
+  video {
+    width: 1920px;
+
+  }
 
   main {
     /*top: -3.5em;*/
