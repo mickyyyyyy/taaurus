@@ -24,12 +24,6 @@ window.addEventListener("scroll", () => {
   reset_banner_height();
 });
 
-// Allows us to adjust the height based on the new position we're in on the
-// webpage from clicking one of the navigation buttons
-//navigationButtons.addEventListener("click", () => {
-  //reset_banner_height();
-//});
-
 // Scrolling variables for service page examples gallery
 let scrollContainer = document.querySelector(".example-wrapper");
 let backBtn = document.getElementById("back-button");
@@ -41,7 +35,11 @@ let examples = examplesDiv.getElementsByClassName("media");
 // Start in the middle
 scrollContainer.scrollLeft = 1 * services.offsetWidth;
 
-nextBtn.addEventListener("click", () => {
+const d = new Date();
+let time = d.getTime();
+const slideTime = 5000;
+
+function nextExample() {
   // Add the leftmost example to the very right
   const head = examples[0];
   const tail = examples[examples.length-1];
@@ -57,11 +55,15 @@ nextBtn.addEventListener("click", () => {
   scrollContainer.style.scrollBehavior = 'smooth';
   scrollContainer.style.transition = 'transform 0.5s';
   scrollContainer.scrollLeft += services.offsetWidth;
+}
+
+nextBtn.addEventListener("click", () => {
+  nextExample();
+  const newDate =  new Date();
+  time = newDate.getTime();
 });
 
-// Go to the previous service example
-backBtn.addEventListener("click", () => {
-
+function previousExample() {
   // Add the rightmost example to the very left
   const head = examples[0];
   const tail = examples[examples.length-1];
@@ -76,7 +78,24 @@ backBtn.addEventListener("click", () => {
   scrollContainer.style.scrollBehavior = 'smooth';
   scrollContainer.style.transition = 'transform 0.5s';
   scrollContainer.scrollLeft -= services.offsetWidth;
+}
+
+// Go to the previous service example
+backBtn.addEventListener("click", () => {
+  previousExample();
+  const newDate =  new Date();
+  time = newDate.getTime();
 });
+
+console.log(time);
+setInterval(() => {
+  const newD = new Date();
+  if (newD.getTime() >= time + slideTime) {
+    nextExample();
+    time = newD.getTime();
+  }
+}, 100);
+
 
 window.addEventListener("resize", () => {
   // Adjust the position of the services gallery
