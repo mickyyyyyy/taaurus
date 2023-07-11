@@ -19,9 +19,11 @@ html {
   scroll-behavior:smooth;
   scrollbar-width: none; /* for Firefox */
   width: min(1920px, 100%);
+  height: 100%;
   justify-content: center;
   margin: 0 auto;
   transform-origin: center;
+  background-color: black;
 }
 
 /* Body styling */
@@ -32,8 +34,12 @@ body {
   overflow-y: scroll;
   overflow: -moz-scrollbars-none;
   font-size: 100%;
-  width: min(1920px, 100%);
   text-align: center;
+}
+
+.odd-text,
+.main-sections {
+  background-color: white;
 }
 
 body::-webkit-scrollbar {
@@ -47,13 +53,13 @@ header {
   top: 0;
   width: min(1920px, 100%);
   max-width: 100%;
-  height: 3.5em;
+  height: 57.6px;
   z-index: 2;
 }
 
 .header-bar {
   position: relative;
-  height: 3.25em;
+  height: 57.6px;
   max-width: 100%;
   padding: 0.5em 0.5em;
 }
@@ -64,44 +70,56 @@ header .top {
 
 /* Icon styling */
 #icon {
-  width: min(10%, 10vw);
+  width: min(2%, 2vw);
+  position: absolute;
   float: left;
-  position: relative;
-
+  top: 6.72px;
+  left: 9.6px;
 }
 
 header img {
-  width: 2em;
+  width: 38.4px;
   float: left;
 }
 
 /* Navigation styling */
 header nav {
   text-align: center;
-  height: 3em;
+  height: 57.6px;
 }
 
 header #navigation {
-  float: right;
+  /*float: right;*/
   margin-left: 10%;
   width: 80%;
   position: absolute;
-  top: 0.25em;
+  /*top: 0.25em;*/
+  top: 0;
   left: 0;
-  height: 3em;
+  height: 57.6px;
   text-align: center;
   overflow-y: visible;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .nav-options {
   margin: 0;
   position: absolute;
-  top: 50%;
+  height: 57.6px;
+  /*top: 50%;
   transform: translateY(-50%);
+  */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 nav li {
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 8em;
   height: 1.5em;
 }
@@ -149,6 +167,10 @@ video {
   width: min(1920px, 100vw);
 }
 
+main {
+  margin-top: calc(-1080px + min(1080px, 100vh))
+}
+
 main h1 {
 /*  height: 1080px;*/
   margin: 0 0;
@@ -161,13 +183,13 @@ main h1 {
 
 /* Quote styling */
 .odd-text {
-  margin-top: 5em;
-  margin-bottom: 5em;
   width: 90%;
-  padding: min(8em, 5vw);
+  padding: min(13em, calc(5em + 5vw)) min(8em, 5vw);
   text-align: left;
   overflow-x: hidden;
   z-index: 1;
+  margin: 0;
+  width: 100%;
 }
 
 .odd-text h3 {
@@ -200,11 +222,6 @@ h2 {
 }
 
 /* Services styling */
-#services {
-  height: auto;
-  /*width: min(1920px, 100vw);*/
-}
-
 .example-subsection {
   display: flex;
   align-items: center;
@@ -339,17 +356,17 @@ span {
 }
 
 /* Team styling */
-#team {
-  height: 1080px;
-}
-
 #team .team-member {
   display: inline-block;
   width: 45%;
+  margin: 0 2em;
+  vertical-align: top;
 }
 
 .team-member div {
   width: 40%;
+  display: inline-block;
+  vertical-align: top;
 }
 
 #roger-profile {
@@ -357,17 +374,17 @@ span {
 }
 
 .left {
-  float: left;
+  /*float: left;*/
 }
 
 .right {
-  float: right;
+  /*float: right;*/
 }
 
 .text {
+  height: 100%;
   font-family: Outfit;
-  margin: 0 5em;
-  bottom: 15em;
+  margin: 0% 5em;
 }
 
 .text h3 {
@@ -397,7 +414,6 @@ span {
 #careers {
   padding-left: 0;
   padding-right: 0;
-  height: 1080px;
   width: min(1920px, 100vw);
 }
 
@@ -407,7 +423,6 @@ span {
 }
 
 .body-text {
-  height: auto;
   position: relative;
   width: max(1920px, 100%);
   max-width: 100%;
@@ -416,7 +431,7 @@ span {
 
 .body-text:before {
   content: "positions";
-  z-index: -1;
+  z-index: 0;
   position: relative;
   left: -0.10em;
   top: -0.25em;
@@ -432,9 +447,8 @@ span {
 
 .body-text:after {
   content: "coming";
-  z-index: -1;
+  z-index: 0;
   position: relative;
-  top: -1.35em;
   right: -0.5em;
   font-family: Outfit;
   font-size: 450px;
@@ -453,9 +467,9 @@ span {
   text-align: left;
   position: relative;
   line-height: 2.5em;
-  width: min(57.5em, 57.5vw);
+  width: min(57.5em, 80vw);
   margin: 0 auto;
-  top: -15em;
+  /*top: -15em;*/
 }
 
 /* Contact us styling */
@@ -544,12 +558,12 @@ textarea {
 /* Footer styling */
 footer {
   background-color: #A6313A;;
-  position: absolute;
+  /*position: absolute;*/
   clear: right;
   margin: 0 auto;
   width: min(1920px, 100%);
   max-width: 100%;
-  top: 455em;
+  /*top: 455em;*/
 }
 
 footer h6 {
@@ -563,56 +577,41 @@ footer h6 {
 @media only screen and (max-width: 1919px) {
 
   header {
-    height: 4vh;
+    height: 3vw;
   }
 
   header nav {
-    height: 4vh;
+    height: 3vw;
   }
 
   header #navigation {
-    height: 4vh;
+    height: 3vw;
     top: 0;
   }
 
-  /*
-  header img {
-    position: fixed;
-    left: 1vw;
-    top: 0.5vw;
-    width: 2vw;
+  .nav-options {
+    height: 3vw;
   }
-  */
 
-  header img {
-    position: fixed;
-    top: 0.85vh;
-    width: 2vh;
+  #icon {
+    top: 0.35vw;
     left: 0.5vw;
   }
-  /*
-  .banner {
-    top: -3.5em;
-  }
-  */
 
-  /*
-  video {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  header img {
+    width: 2vw;
   }
-  */
 
   video {
     width: 1920px;
 
   }
 
+  /*
   main {
-    /*top: -3.5em;*/
     margin-top: 7vh;
   }
+  */
 
   #left {
     top: calc(20vw - min(1.5em, 40vh));
@@ -622,73 +621,41 @@ footer h6 {
     bottom: calc(20vw + min(1.5em, 40vh));
   }
 
-  #team {
-    height: 700vh;
-  }
-
   #team .team-member {
     display: block;
-    margin: 10vw 0;
+    margin: 10vh 0;
     width: 100%;
   }
 
-  #team .left .profile {
+  #team .profile {
     width: 40vw;
-    margin-right: 5vw;
-  }
-
-  #team .right .profile {
-    width: 40vw;
-    margin-left: 5vw;
   }
 
   #team .text {
-    width: 40vw;
-    margin: 0 5vw;
+    width: 50vw;
+    margin: 0 0vw;
   }
 
-  #careers {
-    height: 300vh;
-  }
-
-  footer {
-    top: 900em;
+  .body-text::before,
+  .body-text::after {
+    font-size: 300px;
   }
 
 }
 
 @media only screen and (max-width: 1200px) {
-  header {
-    height: 4vw;
+
+  .body-text::before,
+  .body-text::after {
+    font-size: 250px;
   }
 
-  header nav {
-    height: 4vw;
-  }
-
-  header img {
-    top: 0.75vw;
-  }
-
-  header #navigation {
-    top: 0.25vw;
-    height: 4vw;
-  }
-
-  /*main {
-    top: -5vw;
-  }*/
-
-  footer {
-    top: 750em;
+  #contact {
+    background-position: center center;
   }
 }
 
 @media only screen and (max-width: 1000px) {
-
-  header #navigation {
-    top: 0vh;
-  }
 
   .nav-options li h4 {
     font-size: min(14px);
@@ -696,146 +663,64 @@ footer h6 {
 
   .nav-options li {
     width: 17.5vw;
+    font-size: 12px;
   }
 
-  /*main {
-    top: -6vw;
-  }*/
-
-  #careers {
-    height: 500vh;
-  }
-
-  footer {
-    top: 1050em;
+  .body-text::before,
+  .body-text::after {
+    font-size: 200px;
   }
 }
 
 @media only screen and (max-width: 800px) {
-  header {
-    height: 4vw;
-  }
-
-  header img {
-    width: 1.5vh;
-  }
-
-  header nav {
-    height: 4vw;
-  }
-
-  header #navigation {
-    top: 1vw;
-    height: 2.5vw;
-  }
-
-  header #navigation li {
-    width: 17.5vw;
-  }
 
   .nav-options li h4 {
     font-size: min(12px);
   }
 
-  /*main {
-    top: -5.6em;
-  }*/
-
-  #careers {
-    height: 700vh;
+  .body-text::before,
+  .body-text::after {
+    font-size: 150px;
   }
 }
 
 @media only screen and (max-width: 700px) {
-  header #navigation {
-    top: 1vw;
-  }
 
   .nav-options li h4 {
     font-size: min(10px);
   }
-
-  #careers {
-    height: 800vh;
-  }
 }
 
 @media only screen and (max-width: 600px) {
-
-  header img {
-    top: 0.5vh;
-    width: 1vh;
-  }
 
   html {
     width: 100vw;
     max-width: 100vw;
   }
 
-  header #navigation {
-    top: 1.25vw;
-  }
-
   .nav-options li h4 {
     font-size: min(8px);
   }
 
-  #careers {
-    height: 500vw;/*1000vh;*/
-  }
-
-  footer {
-    top: 900em;
-  }
-}
-
-@media only screen and (max-width: 500px) {
-
-  header img {
-    top: 0.35vh;
-    width: 1vh;
-  }
-
-  header #navigation {
-    top: 1.5vw;
-  }
-
-  #team {
-    height: 800vh;
-  }
-}
-
-@media only screen and (max-width: 420px) {
-
-  #team {
-    height: 1000vh;
+  .body-text::before,
+  .body-text::after {
+    font-size: 100px;
   }
 }
 
 @media only screen and (max-width: 400px) {
 
-  header img {
-    top: 0.15vh;
-    width: 1vh;
-  }
-
   .odd-text {
     width: 100vw;
   }
 
-  #team {
-    height: 550vw;
-  }
-
   #careers {
-    height: 375vw;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
   }
 
-  /*main {
-    top: -6em;
-  }*/
-
-  footer {
-    top: 700em;
+  .body-text::before,
+  .body-text::after {
+    font-size: 50px;
   }
 }
