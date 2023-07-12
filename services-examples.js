@@ -5,8 +5,25 @@ let video = document.querySelector("video");
 const bannerDefaultWidth = 1920;
 
 // Adjusts the height of the banner as we move up and down the page
+let portrait = document.querySelector("#portrait");
+let landscape = document.querySelector('#landscape');
 function reset_banner_height() {
-  video.style.top = `${body.scrollTop}px`;
+  //if (window.screen.width >= window.screen.height) {
+  landscape.style.top = `${body.scrollTop}px`;
+  //} //else {
+    //portrait.style.top = `${body.scrollTop}px`;
+  //}
+}
+
+// Determines whether we retrieve the static image or the video
+function determine_banner_media() {
+  if (window.screen.width >= window.screen.height) {
+    portrait.style.display = 'none';
+    landscape.style.display = 'block';
+  } else {
+    portrait.style.display = 'block';
+    landscape.style.display = 'none';
+  }
 }
 
 // Refresh pulls the user back to the top of the website
@@ -17,6 +34,7 @@ if (performance.navigation.type == performance.navigation.TYPE_RELOAD) {
 // Zoom banner image to the middle (on mobiles)
 window.addEventListener("load", () => {
   reset_banner_height();
+  determine_banner_media();
 });
 
 // Adjusts the height of the banner when we scroll
@@ -105,4 +123,5 @@ window.addEventListener("resize", () => {
 
   // Zoom banner image to the middle (on mobiles)
   reset_banner_height();
+  determine_banner_media();
 });

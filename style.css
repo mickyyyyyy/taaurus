@@ -143,8 +143,8 @@ nav h4 {
 
 /* Main styling */
 main {
-  position: absolute;
-  top: 1080px;
+  /*position: absolute;*/
+  /*top: 1080px;*/
   /*background-image: url("./images/Website_banner.png");*/
   /*background-repeat: no-repeat;*/
   /*background-position: top center;*/
@@ -156,19 +156,27 @@ main {
 .banner {
   overflow: hidden;
   width: 100%;
-  height: min(1080px, 100vh);
+  /*height: min(1080px, 100vh);*/
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-video {
-  position: relative;
+#landscape {
   width: min(1920px, 100vw);
+  position: relative;
+  display: none; /* Gets changed on resize */
+}
+
+#portrait {
+  position: relative;
+  height: min(873px, 100vh);
+  width: min(1916px, calc(1916/873 * 100vh));
+  /*width: 1920px;*/
 }
 
 main {
-  margin-top: calc(-1080px + min(1080px, 100vh))
+  /*margin-top: calc(-1080px + min(1080px, 100vh))*/
 }
 
 main h1 {
@@ -602,10 +610,11 @@ footer h6 {
     width: 2vw;
   }
 
+  /*
   video {
     width: 1920px;
-
   }
+  */
 
   /*
   main {
